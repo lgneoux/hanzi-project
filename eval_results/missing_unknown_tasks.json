@@ -1,0 +1,7 @@
+{
+    "description": "These are positions where action was judged as unknown by answer_action.json lookup using phrase[i] + change. target_char is replace[i].",
+    "total_unique_tasks": 0,
+    "total_unique_missing_chars": 0,
+    "tasks": [],
+    "conflicts": []
+}
