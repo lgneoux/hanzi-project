@@ -1,0 +1,38 @@
+{
+    "claude-opus-4-6": {
+        "success": 100,
+        "suspicious_long_output": 36,
+        "radical_clean_error": 7
+    },
+    "gemini-3-flash-preview": {
+        "success": 100,
+        "suspicious_long_output": 2,
+        "radical_clean_error": 5
+    },
+    "glm-5.1": {
+        "success": 97,
+        "radical_clean_error": 2,
+        "api_error": 3,
+        "final_error_after_retries": 3,
+        "transform_clean_error": 2
+    },
+    "gemini-3-pro-preview": {
+        "success": 100,
+        "suspicious_long_output": 2
+    },
+    "gpt-5.4": {
+        "success": 100,
+        "suspicious_long_output": 11,
+        "radical_clean_error": 6
+    },
+    "deepseek-v3.2": {
+        "success": 100,
+        "radical_clean_error": 22,
+        "suspicious_long_output": 1
+    },
+    "kimi-k2.5": {
+        "success": 100,
+        "suspicious_long_output": 10,
+        "radical_clean_error": 2
+    }
+}
