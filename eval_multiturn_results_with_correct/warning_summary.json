@@ -1,0 +1,27 @@
+{
+    "anthropic/claude-opus-4.6": {
+        "suspicious_long_transform_output": 303,
+        "suspicious_long_radical_output": 192,
+        "suspicious_long_output": 29
+    },
+    "google/gemini-3.1-pro-preview": {
+        "suspicious_long_transform_output": 43,
+        "suspicious_long_radical_output": 5,
+        "suspicious_long_output": 1
+    },
+    "openai/gpt-5.4": {
+        "suspicious_long_radical_output": 4
+    },
+    "deepseek/deepseek-v3.2": {
+        "suspicious_long_radical_output": 26
+    },
+    "moonshotai/kimi-k2.5": {
+        "suspicious_long_radical_output": 90,
+        "suspicious_long_transform_output": 50,
+        "suspicious_long_output": 1
+    },
+    "z-ai/glm-5.1": {
+        "suspicious_long_transform_output": 2,
+        "suspicious_long_radical_output": 1
+    }
+}

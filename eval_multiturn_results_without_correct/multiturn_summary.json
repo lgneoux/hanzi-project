@@ -1,0 +1,248 @@
+[
+    {
+        "model": "anthropic/claude-opus-4.6",
+        "total_items": 500,
+        "avg_score": 0.5959085407290989,
+        "char_accuracy": 0.576932956588749,
+        "total_correct_chars": 2246,
+        "total_chars": 3893,
+        "radical_avg_score": 0.8735225239633766,
+        "radical_char_accuracy": 0.8774723863344465,
+        "error_counts": {
+            "success": 496,
+            "final_error_after_retries": 4,
+            "radical_clean_error": 4
+        },
+        "warning_counts": {
+            "suspicious_long_radical_output": 194,
+            "suspicious_long_transform_output": 283,
+            "suspicious_long_output": 27
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.6233333333333332,
+                "char_accuracy": 0.6200716845878136
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.6196666666666666,
+                "char_accuracy": 0.6211382113821138
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.5790190476190475,
+                "char_accuracy": 0.5787401574803149
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.562348448630683,
+                "char_accuracy": 0.5562279374684821
+            }
+        }
+    },
+    {
+        "model": "google/gemini-3.1-pro-preview",
+        "total_items": 500,
+        "avg_score": 0.7194641528393544,
+        "char_accuracy": 0.6678653994348831,
+        "total_correct_chars": 2600,
+        "total_chars": 3893,
+        "radical_avg_score": 0.9369157435297384,
+        "radical_char_accuracy": 0.9375802722835859,
+        "error_counts": {
+            "success": 500
+        },
+        "warning_counts": {
+            "suspicious_long_transform_output": 46,
+            "suspicious_long_output": 1,
+            "suspicious_long_radical_output": 2
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.7816666666666666,
+                "char_accuracy": 0.7741935483870968
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.7723333333333332,
+                "char_accuracy": 0.7723577235772358
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.7256825396825397,
+                "char_accuracy": 0.7253937007874016
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.6000407383415405,
+                "char_accuracy": 0.5910237014624307
+            }
+        }
+    },
+    {
+        "model": "openai/gpt-5.4",
+        "total_items": 500,
+        "avg_score": 0.39354166676020075,
+        "char_accuracy": 0.36013357307988697,
+        "total_correct_chars": 1402,
+        "total_chars": 3893,
+        "radical_avg_score": 0.552413603318579,
+        "radical_char_accuracy": 0.3994348831235551,
+        "error_counts": {
+            "success": 499,
+            "final_error_after_retries": 1,
+            "radical_clean_error": 1,
+            "transform_clean_error": 1
+        },
+        "warning_counts": {
+            "suspicious_long_radical_output": 3
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.4649999999999999,
+                "char_accuracy": 0.4551971326164875
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.4212222222222222,
+                "char_accuracy": 0.42276422764227645
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.36555873015873025,
+                "char_accuracy": 0.3631889763779528
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.33114127021540407,
+                "char_accuracy": 0.32576903681290975
+            }
+        }
+    },
+    {
+        "model": "deepseek/deepseek-v3.2",
+        "total_items": 500,
+        "avg_score": 0.21853397549878376,
+        "char_accuracy": 0.16876444901104545,
+        "total_correct_chars": 657,
+        "total_chars": 3893,
+        "radical_avg_score": 0.3901880945960599,
+        "radical_char_accuracy": 0.274081685075777,
+        "error_counts": {
+            "success": 491,
+            "final_error_after_retries": 9,
+            "radical_clean_error": 9
+        },
+        "warning_counts": {
+            "suspicious_long_transform_output": 1,
+            "suspicious_long_radical_output": 28
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.32166666666666655,
+                "char_accuracy": 0.31899641577060933
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.28566666666666674,
+                "char_accuracy": 0.2861788617886179
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.15356507936507938,
+                "char_accuracy": 0.15551181102362205
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.12043748929672204,
+                "char_accuracy": 0.11800302571860817
+            }
+        }
+    },
+    {
+        "model": "moonshotai/kimi-k2.5",
+        "total_items": 500,
+        "avg_score": 0.2733079367118873,
+        "char_accuracy": 0.23067043411250962,
+        "total_correct_chars": 898,
+        "total_chars": 3893,
+        "radical_avg_score": 0.40281144773415073,
+        "radical_char_accuracy": 0.3046493706652967,
+        "error_counts": {
+            "success": 495,
+            "final_error_after_retries": 5,
+            "radical_clean_error": 4,
+            "transform_clean_error": 1
+        },
+        "warning_counts": {
+            "suspicious_long_radical_output": 97,
+            "suspicious_long_transform_output": 49,
+            "suspicious_long_output": 1
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.35499999999999987,
+                "char_accuracy": 0.35842293906810035
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.35344444444444445,
+                "char_accuracy": 0.3544715447154472
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.18870158730158731,
+                "char_accuracy": 0.19389763779527558
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.19639682621262913,
+                "char_accuracy": 0.19314170448814927
+            }
+        }
+    },
+    {
+        "model": "z-ai/glm-5.1",
+        "total_items": 500,
+        "avg_score": 0.6218522562791153,
+        "char_accuracy": 0.5846390958129977,
+        "total_correct_chars": 2276,
+        "total_chars": 3893,
+        "radical_avg_score": 0.8948594051909857,
+        "radical_char_accuracy": 0.8892884664782944,
+        "error_counts": {
+            "success": 500
+        },
+        "warning_counts": {
+            "suspicious_long_transform_output": 4,
+            "suspicious_long_radical_output": 1
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.6849999999999998,
+                "char_accuracy": 0.6774193548387096
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.6518888888888889,
+                "char_accuracy": 0.6520325203252032
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.6196190476190476,
+                "char_accuracy": 0.6181102362204725
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.5375233108307463,
+                "char_accuracy": 0.5335350479072113
+            }
+        }
+    }
+]

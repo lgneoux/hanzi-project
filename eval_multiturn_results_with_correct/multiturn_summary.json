@@ -1,0 +1,430 @@
+[
+    {
+        "model": "anthropic/claude-opus-4.6",
+        "total_items": 500,
+        "avg_score": 0.6046946343453301,
+        "char_accuracy": 0.5915746211148215,
+        "total_correct_chars": 2303,
+        "total_chars": 3893,
+        "radical_valid_items": 500,
+        "radical_avg_score": 0.8695472110410051,
+        "radical_char_accuracy": 0.8700231184176728,
+        "confirmed_summary": {
+            "n": 255,
+            "transform_avg_score": 0.6130115658542017,
+            "transform_char_accuracy": 0.6019127316198446,
+            "total_correct_chars": 1007,
+            "total_chars": 1673
+        },
+        "corrected_summary": {
+            "n": 245,
+            "transform_avg_score": 0.5960382362442567,
+            "transform_char_accuracy": 0.5837837837837838,
+            "total_correct_chars": 1296,
+            "total_chars": 2220
+        },
+        "no_truth_radicals_summary": {
+            "n": 0,
+            "transform_avg_score": null,
+            "transform_char_accuracy": null,
+            "total_correct_chars": 0,
+            "total_chars": 0
+        },
+        "confirmed_n": 255,
+        "confirmed_transform_avg_score": 0.6130115658542017,
+        "confirmed_transform_char_accuracy": 0.6019127316198446,
+        "corrected_n": 245,
+        "corrected_transform_avg_score": 0.5960382362442567,
+        "corrected_transform_char_accuracy": 0.5837837837837838,
+        "no_truth_radicals_n": 0,
+        "no_truth_transform_avg_score": null,
+        "no_truth_transform_char_accuracy": null,
+        "error_counts": {
+            "success": 496,
+            "final_error_after_retries": 4,
+            "radical_clean_error": 4
+        },
+        "warning_counts": {
+            "suspicious_long_transform_output": 303,
+            "suspicious_long_radical_output": 192,
+            "suspicious_long_output": 29
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.5916666666666669,
+                "char_accuracy": 0.5878136200716846
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.6365555555555554,
+                "char_accuracy": 0.6373983739837399
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.6036857142857145,
+                "char_accuracy": 0.6023622047244095
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.5778928230956013,
+                "char_accuracy": 0.5723651033787192
+            }
+        }
+    },
+    {
+        "model": "google/gemini-3.1-pro-preview",
+        "total_items": 500,
+        "avg_score": 0.7310620174441256,
+        "char_accuracy": 0.6873876188029797,
+        "total_correct_chars": 2676,
+        "total_chars": 3893,
+        "radical_valid_items": 500,
+        "radical_avg_score": 0.9363169518780823,
+        "radical_char_accuracy": 0.9404058566658104,
+        "confirmed_summary": {
+            "n": 325,
+            "transform_avg_score": 0.7395770746839019,
+            "transform_char_accuracy": 0.7006187529747739,
+            "total_correct_chars": 1472,
+            "total_chars": 2101
+        },
+        "corrected_summary": {
+            "n": 175,
+            "transform_avg_score": 0.7152483397131127,
+            "transform_char_accuracy": 0.671875,
+            "total_correct_chars": 1204,
+            "total_chars": 1792
+        },
+        "no_truth_radicals_summary": {
+            "n": 0,
+            "transform_avg_score": null,
+            "transform_char_accuracy": null,
+            "total_correct_chars": 0,
+            "total_chars": 0
+        },
+        "confirmed_n": 325,
+        "confirmed_transform_avg_score": 0.7395770746839019,
+        "confirmed_transform_char_accuracy": 0.7006187529747739,
+        "corrected_n": 175,
+        "corrected_transform_avg_score": 0.7152483397131127,
+        "corrected_transform_char_accuracy": 0.671875,
+        "no_truth_radicals_n": 0,
+        "no_truth_transform_avg_score": null,
+        "no_truth_transform_char_accuracy": null,
+        "error_counts": {
+            "success": 500
+        },
+        "warning_counts": {
+            "suspicious_long_transform_output": 43,
+            "suspicious_long_radical_output": 5,
+            "suspicious_long_output": 1
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.7783333333333333,
+                "char_accuracy": 0.7706093189964157
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.7887777777777778,
+                "char_accuracy": 0.7869918699186992
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.7196222222222223,
+                "char_accuracy": 0.71751968503937
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.6354258475542791,
+                "char_accuracy": 0.6293494704992436
+            }
+        }
+    },
+    {
+        "model": "openai/gpt-5.4",
+        "total_items": 500,
+        "avg_score": 0.40305367800944675,
+        "char_accuracy": 0.3611610583097868,
+        "total_correct_chars": 1406,
+        "total_chars": 3893,
+        "radical_valid_items": 500,
+        "radical_avg_score": 0.5581219713870729,
+        "radical_char_accuracy": 0.4050860518880041,
+        "confirmed_summary": {
+            "n": 129,
+            "transform_avg_score": 0.5114433370247324,
+            "transform_char_accuracy": 0.5055187637969095,
+            "total_correct_chars": 229,
+            "total_chars": 453
+        },
+        "corrected_summary": {
+            "n": 371,
+            "transform_avg_score": 0.3653656294569625,
+            "transform_char_accuracy": 0.3421511627906977,
+            "total_correct_chars": 1177,
+            "total_chars": 3440
+        },
+        "no_truth_radicals_summary": {
+            "n": 0,
+            "transform_avg_score": null,
+            "transform_char_accuracy": null,
+            "total_correct_chars": 0,
+            "total_chars": 0
+        },
+        "confirmed_n": 129,
+        "confirmed_transform_avg_score": 0.5114433370247324,
+        "confirmed_transform_char_accuracy": 0.5055187637969095,
+        "corrected_n": 371,
+        "corrected_transform_avg_score": 0.3653656294569625,
+        "corrected_transform_char_accuracy": 0.3421511627906977,
+        "no_truth_radicals_n": 0,
+        "no_truth_transform_avg_score": null,
+        "no_truth_transform_char_accuracy": null,
+        "error_counts": {
+            "success": 500
+        },
+        "warning_counts": {
+            "suspicious_long_radical_output": 4
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.4866666666666666,
+                "char_accuracy": 0.48028673835125446
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.4544444444444444,
+                "char_accuracy": 0.45203252032520325
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.3561682539682541,
+                "char_accuracy": 0.35826771653543305
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.3213797914028659,
+                "char_accuracy": 0.3177004538577912
+            }
+        }
+    },
+    {
+        "model": "deepseek/deepseek-v3.2",
+        "total_items": 500,
+        "avg_score": 0.23191295632360048,
+        "char_accuracy": 0.17929617261751862,
+        "total_correct_chars": 698,
+        "total_chars": 3893,
+        "radical_valid_items": 500,
+        "radical_avg_score": 0.39457126045803204,
+        "radical_char_accuracy": 0.2735679424608271,
+        "confirmed_summary": {
+            "n": 57,
+            "transform_avg_score": 0.41959064327485374,
+            "transform_char_accuracy": 0.42162162162162165,
+            "total_correct_chars": 78,
+            "total_chars": 185
+        },
+        "corrected_summary": {
+            "n": 443,
+            "transform_avg_score": 0.2077648115014302,
+            "transform_char_accuracy": 0.16720604099244876,
+            "total_correct_chars": 620,
+            "total_chars": 3708
+        },
+        "no_truth_radicals_summary": {
+            "n": 0,
+            "transform_avg_score": null,
+            "transform_char_accuracy": null,
+            "total_correct_chars": 0,
+            "total_chars": 0
+        },
+        "confirmed_n": 57,
+        "confirmed_transform_avg_score": 0.41959064327485374,
+        "confirmed_transform_char_accuracy": 0.42162162162162165,
+        "corrected_n": 443,
+        "corrected_transform_avg_score": 0.2077648115014302,
+        "corrected_transform_char_accuracy": 0.16720604099244876,
+        "no_truth_radicals_n": 0,
+        "no_truth_transform_avg_score": null,
+        "no_truth_transform_char_accuracy": null,
+        "error_counts": {
+            "success": 495,
+            "final_error_after_retries": 5,
+            "radical_clean_error": 5
+        },
+        "warning_counts": {
+            "suspicious_long_radical_output": 26
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.3233333333333333,
+                "char_accuracy": 0.31899641577060933
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.3072222222222222,
+                "char_accuracy": 0.3073170731707317
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.1705333333333334,
+                "char_accuracy": 0.16929133858267717
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.12978515862773501,
+                "char_accuracy": 0.12506303580433686
+            }
+        }
+    },
+    {
+        "model": "moonshotai/kimi-k2.5",
+        "total_items": 500,
+        "avg_score": 0.2966366849689847,
+        "char_accuracy": 0.2548163370151554,
+        "total_correct_chars": 992,
+        "total_chars": 3893,
+        "radical_valid_items": 500,
+        "radical_avg_score": 0.41079834696091655,
+        "radical_char_accuracy": 0.31852042126894425,
+        "confirmed_summary": {
+            "n": 60,
+            "transform_avg_score": 0.40817230273752014,
+            "transform_char_accuracy": 0.3968253968253968,
+            "total_correct_chars": 100,
+            "total_chars": 252
+        },
+        "corrected_summary": {
+            "n": 440,
+            "transform_avg_score": 0.2814272825460028,
+            "transform_char_accuracy": 0.2449876407580335,
+            "total_correct_chars": 892,
+            "total_chars": 3641
+        },
+        "no_truth_radicals_summary": {
+            "n": 0,
+            "transform_avg_score": null,
+            "transform_char_accuracy": null,
+            "total_correct_chars": 0,
+            "total_chars": 0
+        },
+        "confirmed_n": 60,
+        "confirmed_transform_avg_score": 0.40817230273752014,
+        "confirmed_transform_char_accuracy": 0.3968253968253968,
+        "corrected_n": 440,
+        "corrected_transform_avg_score": 0.2814272825460028,
+        "corrected_transform_char_accuracy": 0.2449876407580335,
+        "no_truth_radicals_n": 0,
+        "no_truth_transform_avg_score": null,
+        "no_truth_transform_char_accuracy": null,
+        "error_counts": {
+            "success": 498,
+            "final_error_after_retries": 2,
+            "transform_clean_error": 2,
+            "radical_clean_error": 1
+        },
+        "warning_counts": {
+            "suspicious_long_radical_output": 90,
+            "suspicious_long_transform_output": 50,
+            "suspicious_long_output": 1
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.35999999999999993,
+                "char_accuracy": 0.3655913978494624
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.36777777777777776,
+                "char_accuracy": 0.367479674796748
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.23726031746031745,
+                "char_accuracy": 0.23917322834645668
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.2199530890822881,
+                "char_accuracy": 0.21230458900655572
+            }
+        }
+    },
+    {
+        "model": "z-ai/glm-5.1",
+        "total_items": 500,
+        "avg_score": 0.6313275005159671,
+        "char_accuracy": 0.6026200873362445,
+        "total_correct_chars": 2346,
+        "total_chars": 3893,
+        "radical_valid_items": 500,
+        "radical_avg_score": 0.8949471853357153,
+        "radical_char_accuracy": 0.902645774466992,
+        "confirmed_summary": {
+            "n": 275,
+            "transform_avg_score": 0.6255779236005924,
+            "transform_char_accuracy": 0.6041433370660694,
+            "total_correct_chars": 1079,
+            "total_chars": 1786
+        },
+        "corrected_summary": {
+            "n": 225,
+            "transform_avg_score": 0.6383547611903109,
+            "transform_char_accuracy": 0.6013289036544851,
+            "total_correct_chars": 1267,
+            "total_chars": 2107
+        },
+        "no_truth_radicals_summary": {
+            "n": 0,
+            "transform_avg_score": null,
+            "transform_char_accuracy": null,
+            "total_correct_chars": 0,
+            "total_chars": 0
+        },
+        "confirmed_n": 275,
+        "confirmed_transform_avg_score": 0.6255779236005924,
+        "confirmed_transform_char_accuracy": 0.6041433370660694,
+        "corrected_n": 225,
+        "corrected_transform_avg_score": 0.6383547611903109,
+        "corrected_transform_char_accuracy": 0.6013289036544851,
+        "no_truth_radicals_n": 0,
+        "no_truth_transform_avg_score": null,
+        "no_truth_transform_char_accuracy": null,
+        "error_counts": {
+            "success": 500
+        },
+        "warning_counts": {
+            "suspicious_long_transform_output": 2,
+            "suspicious_long_radical_output": 1
+        },
+        "bucket_summary": {
+            "short_1_3": {
+                "n": 100,
+                "avg_score": 0.6716666666666667,
+                "char_accuracy": 0.6594982078853047
+            },
+            "medium_4_6": {
+                "n": 150,
+                "avg_score": 0.6556666666666667,
+                "char_accuracy": 0.6552845528455284
+            },
+            "long_7_10": {
+                "n": 125,
+                "avg_score": 0.6372412698412697,
+                "char_accuracy": 0.6368110236220472
+            },
+            "very_long_11_plus": {
+                "n": 125,
+                "avg_score": 0.5639353988892607,
+                "char_accuracy": 0.5607665153807363
+            }
+        }
+    }
+]

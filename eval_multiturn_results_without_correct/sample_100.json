@@ -1,0 +1,3002 @@
+[
+    {
+        "id": 1,
+        "phrase": "并重",
+        "change": "氵",
+        "replace": "洴湩"
+    },
+    {
+        "id": 7,
+        "phrase": "良好",
+        "change": "氵",
+        "replace": "浪汓"
+    },
+    {
+        "id": 10,
+        "phrase": "园丁",
+        "change": "氵",
+        "replace": "沅汀"
+    },
+    {
+        "id": 16,
+        "phrase": "亢奋",
+        "change": "扌",
+        "replace": "抗奋"
+    },
+    {
+        "id": 18,
+        "phrase": "主见",
+        "change": "亻",
+        "replace": "住伣"
+    },
+    {
+        "id": 22,
+        "phrase": "也好",
+        "change": "土",
+        "replace": "地好"
+    },
+    {
+        "id": 25,
+        "phrase": "陪伴",
+        "change": "扌",
+        "replace": "掊拌"
+    },
+    {
+        "id": 30,
+        "phrase": "发炎",
+        "change": "氵",
+        "replace": "泼淡"
+    },
+    {
+        "id": 31,
+        "phrase": "互相",
+        "change": "竹",
+        "replace": "互箱"
+    },
+    {
+        "id": 38,
+        "phrase": "逃离",
+        "change": "木",
+        "replace": "桃樆"
+    },
+    {
+        "id": 39,
+        "phrase": "苹果",
+        "change": "讠",
+        "replace": "评课"
+    },
+    {
+        "id": 43,
+        "phrase": "石块",
+        "change": "忄",
+        "replace": "石快"
+    },
+    {
+        "id": 45,
+        "phrase": "车轮",
+        "change": "氵",
+        "replace": "车沦"
+    },
+    {
+        "id": 47,
+        "phrase": "辞职",
+        "change": "纟",
+        "replace": "辞织"
+    },
+    {
+        "id": 55,
+        "phrase": "租车",
+        "change": "阝",
+        "replace": "阻阵"
+    },
+    {
+        "id": 58,
+        "phrase": "姐妹",
+        "change": "氵",
+        "replace": "沮沬"
+    },
+    {
+        "id": 61,
+        "phrase": "交换",
+        "change": "氵",
+        "replace": "洨涣"
+    },
+    {
+        "id": 66,
+        "phrase": "坪坝",
+        "change": "讠",
+        "replace": "评坝"
+    },
+    {
+        "id": 67,
+        "phrase": "苹果",
+        "change": "氵",
+        "replace": "泙淉"
+    },
+    {
+        "id": 70,
+        "phrase": "诚恳",
+        "change": "土",
+        "replace": "城垠"
+    },
+    {
+        "id": 71,
+        "phrase": "城市",
+        "change": "讠",
+        "replace": "诚市"
+    },
+    {
+        "id": 72,
+        "phrase": "令狐冲",
+        "change": "氵",
+        "replace": "泠泒沖"
+    },
+    {
+        "id": 74,
+        "phrase": "共同体",
+        "change": "扌",
+        "replace": "拱挏体"
+    },
+    {
+        "id": 76,
+        "phrase": "申请书",
+        "change": "亻",
+        "replace": "伸倩书"
+    },
+    {
+        "id": 86,
+        "phrase": "青草地",
+        "change": "氵",
+        "replace": "清草池"
+    },
+    {
+        "id": 87,
+        "phrase": "采买人",
+        "change": "扌",
+        "replace": "採买人"
+    },
+    {
+        "id": 89,
+        "phrase": "明月光",
+        "change": "扌",
+        "replace": "抈抈挄"
+    },
+    {
+        "id": 95,
+        "phrase": "包伙食",
+        "change": "氵",
+        "replace": "泡伙湌"
+    },
+    {
+        "id": 101,
+        "phrase": "青花瓷",
+        "change": "氵",
+        "replace": "清㳸瓷"
+    },
+    {
+        "id": 104,
+        "phrase": "也不错",
+        "change": "氵",
+        "replace": "池㳅㳻"
+    },
+    {
+        "id": 105,
+        "phrase": "采光权",
+        "change": "扌",
+        "replace": "採挄权"
+    },
+    {
+        "id": 113,
+        "phrase": "青涩感",
+        "change": "氵",
+        "replace": "清涩澸"
+    },
+    {
+        "id": 120,
+        "phrase": "采矿场",
+        "change": "扌",
+        "replace": "採扩扬"
+    },
+    {
+        "id": 125,
+        "phrase": "各环节",
+        "change": "氵",
+        "replace": "洛㳅节"
+    },
+    {
+        "id": 127,
+        "phrase": "主战场",
+        "change": "亻",
+        "replace": "住佔场"
+    },
+    {
+        "id": 128,
+        "phrase": "也罢辽",
+        "change": "氵",
+        "replace": "池法辽"
+    },
+    {
+        "id": 129,
+        "phrase": "分布式",
+        "change": "钅",
+        "replace": "分钸式"
+    },
+    {
+        "id": 135,
+        "phrase": "分界线",
+        "change": "氵",
+        "replace": "汾界浅"
+    },
+    {
+        "id": 136,
+        "phrase": "青少年",
+        "change": "忄",
+        "replace": "情少年"
+    },
+    {
+        "id": 137,
+        "phrase": "生活费",
+        "change": "扌",
+        "replace": "生括拂"
+    },
+    {
+        "id": 142,
+        "phrase": "或者是",
+        "change": "扌",
+        "replace": "掝者提"
+    },
+    {
+        "id": 143,
+        "phrase": "怎么样",
+        "change": "氵",
+        "replace": "泎么洋"
+    },
+    {
+        "id": 145,
+        "phrase": "第一名",
+        "change": "氵",
+        "replace": "涕一洺"
+    },
+    {
+        "id": 149,
+        "phrase": "也罢了",
+        "change": "扌",
+        "replace": "扡摆了"
+    },
+    {
+        "id": 156,
+        "phrase": "采风团",
+        "change": "扌",
+        "replace": "採风团"
+    },
+    {
+        "id": 162,
+        "phrase": "主谓宾",
+        "change": "扌",
+        "replace": "拄谓摈"
+    },
+    {
+        "id": 168,
+        "phrase": "主持人",
+        "change": "氵",
+        "replace": "注洔汄"
+    },
+    {
+        "id": 169,
+        "phrase": "分不清",
+        "change": "钅",
+        "replace": "分钚锖"
+    },
+    {
+        "id": 171,
+        "phrase": "青涩味",
+        "change": "忄",
+        "replace": "情涩怽"
+    },
+    {
+        "id": 174,
+        "phrase": "主动权",
+        "change": "氵",
+        "replace": "注沄汉"
+    },
+    {
+        "id": 175,
+        "phrase": "分离度",
+        "change": "氵",
+        "replace": "汾漓渡"
+    },
+    {
+        "id": 182,
+        "phrase": "主心骨",
+        "change": "亻",
+        "replace": "住伈傦"
+    },
+    {
+        "id": 187,
+        "phrase": "分支点",
+        "change": "钅",
+        "replace": "分支钻"
+    },
+    {
+        "id": 194,
+        "phrase": "莫须有",
+        "change": "钅",
+        "replace": "镆钐铕"
+    },
+    {
+        "id": 206,
+        "phrase": "青松岭",
+        "change": "忄",
+        "replace": "情忪怜"
+    },
+    {
+        "id": 209,
+        "phrase": "反粒子",
+        "change": "氵",
+        "replace": "汳泣汓"
+    },
+    {
+        "id": 211,
+        "phrase": "分理处",
+        "change": "氵",
+        "replace": "汾浬处"
+    },
+    {
+        "id": 213,
+        "phrase": "青史册",
+        "change": "氵",
+        "replace": "清㳏册"
+    },
+    {
+        "id": 218,
+        "phrase": "分红险",
+        "change": "氵",
+        "replace": "汾江险"
+    },
+    {
+        "id": 220,
+        "phrase": "青工活",
+        "change": "氵",
+        "replace": "清江舌"
+    },
+    {
+        "id": 221,
+        "phrase": "也无碍",
+        "change": "扌",
+        "replace": "扡抚碍"
+    },
+    {
+        "id": 223,
+        "phrase": "反物质",
+        "change": "氵",
+        "replace": "汳沕质"
+    },
+    {
+        "id": 226,
+        "phrase": "各各他",
+        "change": "氵",
+        "replace": "洛洛池"
+    },
+    {
+        "id": 227,
+        "phrase": "也门人",
+        "change": "亻",
+        "replace": "他们人"
+    },
+    {
+        "id": 233,
+        "phrase": "反坦克",
+        "change": "氵",
+        "replace": "汳泹況"
+    },
+    {
+        "id": 238,
+        "phrase": "方阵队",
+        "change": "讠",
+        "replace": "访阵认"
+    },
+    {
+        "id": 248,
+        "phrase": "方盒子",
+        "change": "氵",
+        "replace": "汸洽汓"
+    },
+    {
+        "id": 249,
+        "phrase": "莫如说",
+        "change": "扌",
+        "replace": "摸扣捝"
+    },
+    {
+        "id": 251,
+        "phrase": "青涩感",
+        "change": "讠",
+        "replace": "请涩感"
+    },
+    {
+        "id": 252,
+        "phrase": "反粒子",
+        "change": "扌",
+        "replace": "扳拉子"
+    },
+    {
+        "id": 255,
+        "phrase": "也未必",
+        "change": "氵",
+        "replace": "池沬泌"
+    },
+    {
+        "id": 256,
+        "phrase": "分公司",
+        "change": "氵",
+        "replace": "汾㳂泀"
+    },
+    {
+        "id": 259,
+        "phrase": "晒太阳",
+        "change": "氵",
+        "replace": "洒汰㳱"
+    },
+    {
+        "id": 261,
+        "phrase": "反社会",
+        "change": "氵",
+        "replace": "汳汢浍"
+    },
+    {
+        "id": 262,
+        "phrase": "青草地",
+        "change": "忄",
+        "replace": "情愺忚"
+    },
+    {
+        "id": 276,
+        "phrase": "分水岭",
+        "change": "犭",
+        "replace": "分水狑"
+    },
+    {
+        "id": 281,
+        "phrase": "青石板",
+        "change": "虫",
+        "replace": "蜻石板"
+    },
+    {
+        "id": 283,
+        "phrase": "分红险",
+        "change": "虫",
+        "replace": "蚡虹险"
+    },
+    {
+        "id": 285,
+        "phrase": "方盒子",
+        "change": "虫",
+        "replace": "蚄蛤虸"
+    },
+    {
+        "id": 292,
+        "phrase": "青铜器",
+        "change": "虫",
+        "replace": "蜻铜器"
+    },
+    {
+        "id": 305,
+        "phrase": "各系科",
+        "change": "犭",
+        "replace": "狢系科"
+    },
+    {
+        "id": 316,
+        "phrase": "青史留",
+        "change": "犭",
+        "replace": "猜㹬留"
+    },
+    {
+        "id": 318,
+        "phrase": "建议书",
+        "change": "氵",
+        "replace": "湕议书"
+    },
+    {
+        "id": 320,
+        "phrase": "丁点儿",
+        "change": "氵",
+        "replace": "汀沾儿"
+    },
+    {
+        "id": 323,
+        "phrase": "尧舜禹",
+        "change": "饣",
+        "replace": "饶舜禹"
+    },
+    {
+        "id": 326,
+        "phrase": "主人翁",
+        "change": "马",
+        "replace": "驻人翁"
+    },
+    {
+        "id": 327,
+        "phrase": "包围圈",
+        "change": "氵",
+        "replace": "泡涠淃"
+    },
+    {
+        "id": 331,
+        "phrase": "沦陷区",
+        "change": "亻",
+        "replace": "伦陷伛"
+    },
+    {
+        "id": 333,
+        "phrase": "粉红色",
+        "change": "氵",
+        "replace": "汾江色"
+    },
+    {
+        "id": 335,
+        "phrase": "池塘边",
+        "change": "亻",
+        "replace": "他傏仂"
+    },
+    {
+        "id": 337,
+        "phrase": "涂改液",
+        "change": "彳",
+        "replace": "徐改液"
+    },
+    {
+        "id": 338,
+        "phrase": "勘探队",
+        "change": "戈",
+        "replace": "戡探队"
+    },
+    {
+        "id": 341,
+        "phrase": "贫民窟",
+        "change": "纟",
+        "replace": "纷民窟"
+    },
+    {
+        "id": 344,
+        "phrase": "阅览室",
+        "change": "氵",
+        "replace": "涚览洷"
+    },
+    {
+        "id": 346,
+        "phrase": "铬合金",
+        "change": "氵",
+        "replace": "洛洽淦"
+    },
+    {
+        "id": 350,
+        "phrase": "格式化",
+        "change": "氵",
+        "replace": "洛江沎"
+    },
+    {
+        "id": 351,
+        "phrase": "分数线",
+        "change": "扌",
+        "replace": "扮擞线"
+    },
+    {
+        "id": 352,
+        "phrase": "粉红色",
+        "change": "纟",
+        "replace": "纷工绝"
+    },
+    {
+        "id": 353,
+        "phrase": "垃圾场",
+        "change": "氵",
+        "replace": "泣汲汤"
+    },
+    {
+        "id": 355,
+        "phrase": "屠宰场",
+        "change": "氵",
+        "replace": "潳滓汤"
+    },
+    {
+        "id": 412,
+        "phrase": "主管单位",
+        "change": "氵",
+        "replace": "注涫单涖"
+    },
+    {
+        "id": 418,
+        "phrase": "工艺美术",
+        "change": "氵",
+        "replace": "江㲸渼沭"
+    },
+    {
+        "id": 425,
+        "phrase": "主要目的",
+        "change": "扌",
+        "replace": "拄要目扚"
+    },
+    {
+        "id": 433,
+        "phrase": "工人领袖",
+        "change": "氵",
+        "replace": "江汄泠油"
+    },
+    {
+        "id": 444,
+        "phrase": "寸土必争",
+        "change": "扌",
+        "replace": "寸扗㧙挣"
+    },
+    {
+        "id": 451,
+        "phrase": "发号施令",
+        "change": "氵",
+        "replace": "泼汅湤泠"
+    },
+    {
+        "id": 491,
+        "phrase": "也是缘分",
+        "change": "亻",
+        "replace": "他偍㑰份"
+    },
+    {
+        "id": 497,
+        "phrase": "主张正义",
+        "change": "扌",
+        "replace": "拄张正义"
+    },
+    {
+        "id": 510,
+        "phrase": "销声匿迹",
+        "change": "扌",
+        "replace": "捎声掿迹"
+    },
+    {
+        "id": 511,
+        "phrase": "白面书生",
+        "change": "氵",
+        "replace": "泊湎书泩"
+    },
+    {
+        "id": 523,
+        "phrase": "仓皇出逃",
+        "change": "氵",
+        "replace": "沧湟泏洮"
+    },
+    {
+        "id": 535,
+        "phrase": "且战且走",
+        "change": "扌",
+        "replace": "抯拈抯走"
+    },
+    {
+        "id": 542,
+        "phrase": "且行且看",
+        "change": "艹",
+        "replace": "苴荇苴看"
+    },
+    {
+        "id": 560,
+        "phrase": "共同奋斗",
+        "change": "扌",
+        "replace": "拱挏奋抖"
+    },
+    {
+        "id": 564,
+        "phrase": "廷尉府邸",
+        "change": "扌",
+        "replace": "挺尉捬抵"
+    },
+    {
+        "id": 570,
+        "phrase": "圭角磨圆",
+        "change": "氵",
+        "replace": "洼角磨涢"
+    },
+    {
+        "id": 574,
+        "phrase": "生根发芽",
+        "change": "扌",
+        "replace": "生拫拨㧎"
+    },
+    {
+        "id": 595,
+        "phrase": "各种借口",
+        "change": "氵",
+        "replace": "洛沖㳻口"
+    },
+    {
+        "id": 616,
+        "phrase": "精美绝伦",
+        "change": "扌",
+        "replace": "掅美绝抡"
+    },
+    {
+        "id": 618,
+        "phrase": "身披重甲",
+        "change": "扌",
+        "replace": "㧶皮揰押"
+    },
+    {
+        "id": 632,
+        "phrase": "昆仑之巅",
+        "change": "亻",
+        "replace": "倱伦之巅"
+    },
+    {
+        "id": 648,
+        "phrase": "尤有余悸",
+        "change": "氵",
+        "replace": "沋洧涂悸"
+    },
+    {
+        "id": 657,
+        "phrase": "亡齿之寒",
+        "change": "氵",
+        "replace": "汒齿之寒"
+    },
+    {
+        "id": 668,
+        "phrase": "且待明年",
+        "change": "亻",
+        "replace": "伹偫仴年"
+    },
+    {
+        "id": 689,
+        "phrase": "占领市场",
+        "change": "亻",
+        "replace": "佔伶市场"
+    },
+    {
+        "id": 695,
+        "phrase": "减员增效",
+        "change": "氵",
+        "replace": "減涢潧滧"
+    },
+    {
+        "id": 758,
+        "phrase": "生龙活虎",
+        "change": "忄",
+        "replace": "性龙恬虎"
+    },
+    {
+        "id": 803,
+        "phrase": "先礼后兵",
+        "change": "氵",
+        "replace": "洗礼洉浜"
+    },
+    {
+        "id": 824,
+        "phrase": "份量充足",
+        "change": "氵",
+        "replace": "汾量㳘浞"
+    },
+    {
+        "id": 846,
+        "phrase": "情理之中",
+        "change": "讠",
+        "replace": "请理之中"
+    },
+    {
+        "id": 854,
+        "phrase": "情形复杂",
+        "change": "讠",
+        "replace": "请形复杂"
+    },
+    {
+        "id": 863,
+        "phrase": "可歌可泣",
+        "change": "氵",
+        "replace": "河滒河立"
+    },
+    {
+        "id": 871,
+        "phrase": "各种各样",
+        "change": "口",
+        "replace": "夂种夂咩"
+    },
+    {
+        "id": 876,
+        "phrase": "也就是你",
+        "change": "亻",
+        "replace": "他僦偍尔"
+    },
+    {
+        "id": 906,
+        "phrase": "各种方案",
+        "change": "扌",
+        "replace": "挌种㧍按"
+    },
+    {
+        "id": 929,
+        "phrase": "方寸之地",
+        "change": "阝",
+        "replace": "邡寸之阤"
+    },
+    {
+        "id": 944,
+        "phrase": "兼并土地",
+        "change": "艹",
+        "replace": "蒹荓芏地"
+    },
+    {
+        "id": 972,
+        "phrase": "哽咽难言",
+        "change": "氵",
+        "replace": "哽洇滩言"
+    },
+    {
+        "id": 980,
+        "phrase": "廉洁奉公",
+        "change": "讠",
+        "replace": "谦诘奉讼"
+    },
+    {
+        "id": 991,
+        "phrase": "清洗干净",
+        "change": "忄",
+        "replace": "情洗忓净"
+    },
+    {
+        "id": 1000,
+        "phrase": "诀窍方法",
+        "change": "扌",
+        "replace": "抉窍㧍抾"
+    },
+    {
+        "id": 1014,
+        "phrase": "诗歌朗诵",
+        "change": "牛",
+        "replace": "特歌朗诵"
+    },
+    {
+        "id": 1031,
+        "phrase": "陪伴左右",
+        "change": "氵",
+        "replace": "涪泮左㳓"
+    },
+    {
+        "id": 1064,
+        "phrase": "娇妻美妾",
+        "change": "亻",
+        "replace": "侨妻美倿"
+    },
+    {
+        "id": 1088,
+        "phrase": "录音设备",
+        "change": "纟",
+        "replace": "绿音设细"
+    },
+    {
+        "id": 1129,
+        "phrase": "分手快乐",
+        "change": "氵",
+        "replace": "汾手決泺"
+    },
+    {
+        "id": 1132,
+        "phrase": "份额分配",
+        "change": "米",
+        "replace": "粉额粉配"
+    },
+    {
+        "id": 1147,
+        "phrase": "桃红柳绿",
+        "change": "⻊",
+        "replace": "跳红柳䟿"
+    },
+    {
+        "id": 1160,
+        "phrase": "诵读诗歌",
+        "change": "辶",
+        "replace": "通读诗歌"
+    },
+    {
+        "id": 1163,
+        "phrase": "池塘月色",
+        "change": "亻",
+        "replace": "他傏仴色"
+    },
+    {
+        "id": 1223,
+        "phrase": "傍晚时分",
+        "change": "氵",
+        "replace": "滂浼时汾"
+    },
+    {
+        "id": 1236,
+        "phrase": "战争英雄",
+        "change": "氵",
+        "replace": "沾浄渶汯"
+    },
+    {
+        "id": 1266,
+        "phrase": "抢购商品",
+        "change": "氵",
+        "replace": "沧沟滳品"
+    },
+    {
+        "id": 1275,
+        "phrase": "航空公司",
+        "change": "氵",
+        "replace": "沆涳㳂泀"
+    },
+    {
+        "id": 1316,
+        "phrase": "炮火连天",
+        "change": "氵",
+        "replace": "泡火涟天"
+    },
+    {
+        "id": 1333,
+        "phrase": "一堆东西",
+        "change": "氵",
+        "replace": "一淮东洒"
+    },
+    {
+        "id": 1422,
+        "phrase": "歉意表达",
+        "change": "讠",
+        "replace": "谦谙表达"
+    },
+    {
+        "id": 1464,
+        "phrase": "饶恕罪过",
+        "change": "扌",
+        "replace": "挠恕罪挝"
+    },
+    {
+        "id": 1478,
+        "phrase": "寺庙建筑",
+        "change": "亻",
+        "replace": "侍伷健筑"
+    },
+    {
+        "id": 1481,
+        "phrase": "特别提醒",
+        "change": "讠",
+        "replace": "诗别提醒"
+    },
+    {
+        "id": 1497,
+        "phrase": "爸爸妈妈",
+        "change": "口",
+        "replace": "吧吧吗吗"
+    },
+    {
+        "id": 1511,
+        "phrase": "新鲜蔬菜",
+        "change": "⻊",
+        "replace": "新鲜蔬踩"
+    },
+    {
+        "id": 1557,
+        "phrase": "情况说明",
+        "change": "氵",
+        "replace": "清況涚㳉"
+    },
+    {
+        "id": 1558,
+        "phrase": "情不自禁",
+        "change": "讠",
+        "replace": "请不自禁"
+    },
+    {
+        "id": 1563,
+        "phrase": "闻风而动",
+        "change": "氵",
+        "replace": "洱沨洏沄"
+    },
+    {
+        "id": 1569,
+        "phrase": "房谋杜断",
+        "change": "氵",
+        "replace": "汸湈汢断"
+    },
+    {
+        "id": 1588,
+        "phrase": "废寝忘食",
+        "change": "氵",
+        "replace": "泼寝汒湌"
+    },
+    {
+        "id": 1596,
+        "phrase": "阉割行为",
+        "change": "氵",
+        "replace": "阉割洐沩"
+    },
+    {
+        "id": 1638,
+        "phrase": "粉饰太平",
+        "change": "扌",
+        "replace": "扮饰太抨"
+    },
+    {
+        "id": 1682,
+        "phrase": "恪守职责",
+        "change": "氵",
+        "replace": "洛守职渍"
+    },
+    {
+        "id": 1687,
+        "phrase": "拼命挣扎",
+        "change": "氵",
+        "replace": "洴命浄扎"
+    },
+    {
+        "id": 1692,
+        "phrase": "玲珑剔透",
+        "change": "钅",
+        "replace": "铃珑锡锈"
+    },
+    {
+        "id": 1694,
+        "phrase": "领略风光",
+        "change": "亻",
+        "replace": "伶佫㐽侊"
+    },
+    {
+        "id": 1700,
+        "phrase": "清晰可见",
+        "change": "讠",
+        "replace": "请晰诃见"
+    },
+    {
+        "id": 1735,
+        "phrase": "颇为动人",
+        "change": "氵",
+        "replace": "波沩沄汄"
+    },
+    {
+        "id": 1786,
+        "phrase": "白菜豆腐",
+        "change": "氵",
+        "replace": "泊菜浢腐"
+    },
+    {
+        "id": 1805,
+        "phrase": "准备就绪",
+        "change": "扌",
+        "replace": "推备㩆㨋"
+    },
+    {
+        "id": 1819,
+        "phrase": "胆大包天",
+        "change": "扌",
+        "replace": "担大抱天"
+    },
+    {
+        "id": 1838,
+        "phrase": "刻骨铭心",
+        "change": "讠",
+        "replace": "该骨铭心"
+    },
+    {
+        "id": 1854,
+        "phrase": "颇为壮观",
+        "change": "氵",
+        "replace": "波沩壮汉"
+    },
+    {
+        "id": 1871,
+        "phrase": "照耀大地",
+        "change": "氵",
+        "replace": "沼濯汏池"
+    },
+    {
+        "id": 1886,
+        "phrase": "各种因素",
+        "change": "氵",
+        "replace": "洛沖洇溸"
+    },
+    {
+        "id": 1897,
+        "phrase": "一份礼物",
+        "change": "氵",
+        "replace": "一汾礼沕"
+    },
+    {
+        "id": 1906,
+        "phrase": "淮南之行",
+        "change": "讠",
+        "replace": "谁南之行"
+    },
+    {
+        "id": 1923,
+        "phrase": "羡慕不已",
+        "change": "巾",
+        "replace": "羡幕不已"
+    },
+    {
+        "id": 1932,
+        "phrase": "煅烧工艺",
+        "change": "钅",
+        "replace": "煅铙工钇"
+    },
+    {
+        "id": 1933,
+        "phrase": "锻炼身体",
+        "change": "火",
+        "replace": "煅炼身㶱"
+    },
+    {
+        "id": 1941,
+        "phrase": "签署协议",
+        "change": "纟",
+        "replace": "签绪协议"
+    },
+    {
+        "id": 1957,
+        "phrase": "渴望成功",
+        "change": "口",
+        "replace": "喝望成叿"
+    },
+    {
+        "id": 1963,
+        "phrase": "韬光养晦",
+        "change": "氵",
+        "replace": "滔洸养海"
+    },
+    {
+        "id": 2029,
+        "phrase": "魂牵梦绕",
+        "change": "氵",
+        "replace": "沄牵梦浇"
+    },
+    {
+        "id": 2042,
+        "phrase": "避重就轻",
+        "change": "氵",
+        "replace": "澼湩涼泾"
+    },
+    {
+        "id": 2061,
+        "phrase": "镜子反射",
+        "change": "土",
+        "replace": "境子坂塮"
+    },
+    {
+        "id": 2062,
+        "phrase": "毕竟如此",
+        "change": "钅",
+        "replace": "针镜铷此"
+    },
+    {
+        "id": 2065,
+        "phrase": "赶快行动",
+        "change": "木",
+        "replace": "杆快桁枟"
+    },
+    {
+        "id": 2066,
+        "phrase": "电线杆子",
+        "change": "走",
+        "replace": "电线赶子"
+    },
+    {
+        "id": 2088,
+        "phrase": "眼花缭乱",
+        "change": "扌",
+        "replace": "拫花撩括"
+    },
+    {
+        "id": 2098,
+        "phrase": "池塘景色",
+        "change": "土",
+        "replace": "地唐景色"
+    },
+    {
+        "id": 2110,
+        "phrase": "烟火焱焱",
+        "change": "日",
+        "replace": "烟炅焱焱"
+    },
+    {
+        "id": 2119,
+        "phrase": "三叠结构",
+        "change": "氵",
+        "replace": "三叠洁沟"
+    },
+    {
+        "id": 2124,
+        "phrase": "由于天气",
+        "change": "疒",
+        "replace": "㾄㽳天气"
+    },
+    {
+        "id": 2127,
+        "phrase": "跟随其后",
+        "change": "疒",
+        "replace": "痕随其后"
+    },
+    {
+        "id": 2132,
+        "phrase": "屡见不鲜",
+        "change": "扌",
+        "replace": "搂见抔鲜"
+    },
+    {
+        "id": 2139,
+        "phrase": "戡乱英雄",
+        "change": "氵",
+        "replace": "湛活渶汯"
+    },
+    {
+        "id": 2141,
+        "phrase": "仓促之间",
+        "change": "氵",
+        "replace": "沧浞之涧"
+    },
+    {
+        "id": 2169,
+        "phrase": "肖像绘画",
+        "change": "扌",
+        "replace": "捎像绘画"
+    },
+    {
+        "id": 2172,
+        "phrase": "各式各样",
+        "change": "木",
+        "replace": "格栻格羊"
+    },
+    {
+        "id": 2186,
+        "phrase": "诽谤之言",
+        "change": "亻",
+        "replace": "俳傍之信"
+    },
+    {
+        "id": 2200,
+        "phrase": "独当一面",
+        "change": "氵",
+        "replace": "浊当一湎"
+    },
+    {
+        "id": 2213,
+        "phrase": "松柏长青",
+        "change": "氵",
+        "replace": "淞湐长清"
+    },
+    {
+        "id": 2225,
+        "phrase": "请君入瓮",
+        "change": "氵",
+        "replace": "清涒入㳂"
+    },
+    {
+        "id": 2231,
+        "phrase": "挣脱束缚",
+        "change": "氵",
+        "replace": "浄涚涑溥"
+    },
+    {
+        "id": 2250,
+        "phrase": "淞沪地区",
+        "change": "木",
+        "replace": "淞枦杝枢"
+    },
+    {
+        "id": 2280,
+        "phrase": "特别关注",
+        "change": "讠",
+        "replace": "诗别关注"
+    },
+    {
+        "id": 2300,
+        "phrase": "缠绕心间",
+        "change": "钅",
+        "replace": "缠铙心锏"
+    },
+    {
+        "id": 2302,
+        "phrase": "分秒必争",
+        "change": "亻",
+        "replace": "份仯佖鿇"
+    },
+    {
+        "id": 2309,
+        "phrase": "坦诚相待",
+        "change": "亻",
+        "replace": "但诚相偫"
+    },
+    {
+        "id": 2316,
+        "phrase": "饭店老板",
+        "change": "木",
+        "replace": "板枮栳反"
+    },
+    {
+        "id": 2333,
+        "phrase": "佼佼者也",
+        "change": "氵",
+        "replace": "洨洨渚池"
+    },
+    {
+        "id": 2349,
+        "phrase": "摇铃呐喊",
+        "change": "忄",
+        "replace": "摇怜呐喊"
+    },
+    {
+        "id": 2350,
+        "phrase": "浅尝辄止",
+        "change": "钅",
+        "replace": "钱尝辄止"
+    },
+    {
+        "id": 2363,
+        "phrase": "桶装汽水",
+        "change": "讠",
+        "replace": "诵装汽水"
+    },
+    {
+        "id": 2394,
+        "phrase": "江山如画",
+        "change": "扌",
+        "replace": "扛山扣画"
+    },
+    {
+        "id": 2405,
+        "phrase": "年级排名",
+        "change": "氵",
+        "replace": "年汲渄洺"
+    },
+    {
+        "id": 2426,
+        "phrase": "绊脚石头",
+        "change": "亻",
+        "replace": "伴脚佦头"
+    },
+    {
+        "id": 2433,
+        "phrase": "猜忌之心",
+        "change": "氵",
+        "replace": "清忌之沁"
+    },
+    {
+        "id": 2448,
+        "phrase": "格言警句",
+        "change": "氵",
+        "replace": "洛言警泃"
+    },
+    {
+        "id": 2460,
+        "phrase": "一张一弛",
+        "change": "扌",
+        "replace": "一张一扡"
+    },
+    {
+        "id": 2468,
+        "phrase": "矫正视力",
+        "change": "女",
+        "replace": "娇姃视力"
+    },
+    {
+        "id": 2476,
+        "phrase": "姑娘漂亮",
+        "change": "氵",
+        "replace": "沽浪票湸"
+    },
+    {
+        "id": 2486,
+        "phrase": "扳回一局",
+        "change": "贝",
+        "replace": "贩回一局"
+    },
+    {
+        "id": 2502,
+        "phrase": "工地现场",
+        "change": "氵",
+        "replace": "江池现汤"
+    },
+    {
+        "id": 2507,
+        "phrase": "望梅止渴",
+        "change": "口",
+        "replace": "望梅止喝"
+    },
+    {
+        "id": 2511,
+        "phrase": "蝎子摆尾",
+        "change": "氵",
+        "replace": "渴汓摆浘"
+    },
+    {
+        "id": 2524,
+        "phrase": "橙红橘绿",
+        "change": "氵",
+        "replace": "澄江潏渌"
+    },
+    {
+        "id": 2525,
+        "phrase": "蹬腿动作",
+        "change": "氵",
+        "replace": "澄腿沄泎"
+    },
+    {
+        "id": 2527,
+        "phrase": "旗开得胜",
+        "change": "氵",
+        "replace": "旗汧淂泩"
+    },
+    {
+        "id": 2533,
+        "phrase": "沙漠之舟",
+        "change": "扌",
+        "replace": "挱摸之舟"
+    },
+    {
+        "id": 2549,
+        "phrase": "银河系统",
+        "change": "彳",
+        "replace": "很河系统"
+    },
+    {
+        "id": 2585,
+        "phrase": "钻研学术",
+        "change": "氵",
+        "replace": "沾汧学沭"
+    },
+    {
+        "id": 2586,
+        "phrase": "挑战自我",
+        "change": "木",
+        "replace": "桃枮自我"
+    },
+    {
+        "id": 2606,
+        "phrase": "青草明年绿",
+        "change": "氵",
+        "replace": "清草㳉年渌"
+    },
+    {
+        "id": 2607,
+        "phrase": "这一份心情",
+        "change": "氵",
+        "replace": "汶一汾沁清"
+    },
+    {
+        "id": 2613,
+        "phrase": "距离产生美",
+        "change": "扌",
+        "replace": "拒摛产生美"
+    },
+    {
+        "id": 2617,
+        "phrase": "他在主位坐着",
+        "change": "氵",
+        "replace": "池在注涖坐洋"
+    },
+    {
+        "id": 2633,
+        "phrase": "他在家里睡觉",
+        "change": "氵",
+        "replace": "池在家浬涶觉"
+    },
+    {
+        "id": 2643,
+        "phrase": "把信件交给他",
+        "change": "氵",
+        "replace": "把信汼洨洽池"
+    },
+    {
+        "id": 2655,
+        "phrase": "分散他的精力",
+        "change": "氵",
+        "replace": "汾潵池汋清氻"
+    },
+    {
+        "id": 2672,
+        "phrase": "一切为了孩子",
+        "change": "氵",
+        "replace": "一沏沩了孩汓"
+    },
+    {
+        "id": 2686,
+        "phrase": "时间就是金钱",
+        "change": "氵",
+        "replace": "时涧涼湜淦浅"
+    },
+    {
+        "id": 2697,
+        "phrase": "我们一起去公园",
+        "change": "氵",
+        "replace": "我们一起法㳂沅"
+    },
+    {
+        "id": 2698,
+        "phrase": "这里的土地肥沃",
+        "change": "氵",
+        "replace": "汶浬汋汢池淝夭"
+    },
+    {
+        "id": 2701,
+        "phrase": "这里的树木很多",
+        "change": "氵",
+        "replace": "汶浬汋㳔沐泿多"
+    },
+    {
+        "id": 2711,
+        "phrase": "分工合作很重要",
+        "change": "扌",
+        "replace": "扮扛拾拃拫揰要"
+    },
+    {
+        "id": 2716,
+        "phrase": "这里的土地平旷",
+        "change": "氵",
+        "replace": "汶浬汋汢池泙㲿"
+    },
+    {
+        "id": 2724,
+        "phrase": "主人的热情好客",
+        "change": "亻",
+        "replace": "住人仢热倩仔佫"
+    },
+    {
+        "id": 2736,
+        "phrase": "这里的土地很硬",
+        "change": "氵",
+        "replace": "汶浬汋汢池泿浭"
+    },
+    {
+        "id": 2737,
+        "phrase": "他是一个好老师",
+        "change": "氵",
+        "replace": "池湜一个汓㳣浉"
+    },
+    {
+        "id": 2743,
+        "phrase": "各种颜色的花朵",
+        "change": "氵",
+        "replace": "洛沖颜色汋㳸㲹"
+    },
+    {
+        "id": 2773,
+        "phrase": "各种颜色的衣服",
+        "change": "氵",
+        "replace": "洛沖颜色汋㳖服"
+    },
+    {
+        "id": 2774,
+        "phrase": "他的主张很明确",
+        "change": "氵",
+        "replace": "池汋注涨泿㳉确"
+    },
+    {
+        "id": 2782,
+        "phrase": "把门轻轻地打开",
+        "change": "亻",
+        "replace": "把们轻轻他仃开"
+    },
+    {
+        "id": 2792,
+        "phrase": "采桑子的节奏感",
+        "change": "扌",
+        "replace": "採搡子扚节揍撼"
+    },
+    {
+        "id": 2803,
+        "phrase": "主客观因素结合",
+        "change": "氵",
+        "replace": "注洛汉洇溸洁洽"
+    },
+    {
+        "id": 2808,
+        "phrase": "各个领域的专家",
+        "change": "氵",
+        "replace": "洛个泠淢汋专家"
+    },
+    {
+        "id": 2815,
+        "phrase": "青山绿水的景色",
+        "change": "讠",
+        "replace": "请讪绿水的谅色"
+    },
+    {
+        "id": 2844,
+        "phrase": "把门关上别出声",
+        "change": "氵",
+        "replace": "把门浂上别泏声"
+    },
+    {
+        "id": 2851,
+        "phrase": "请大家保持安静",
+        "change": "氵",
+        "replace": "清汏家湺洔洝瀞"
+    },
+    {
+        "id": 2865,
+        "phrase": "注意观察的变化",
+        "change": "氵",
+        "replace": "主澺汉漈汋洂沎"
+    },
+    {
+        "id": 2874,
+        "phrase": "各司其职的工作",
+        "change": "氵",
+        "replace": "洛泀淇职汋江泎"
+    },
+    {
+        "id": 2881,
+        "phrase": "把门关上别说话",
+        "change": "亻",
+        "replace": "把们关仩别侻佸"
+    },
+    {
+        "id": 2882,
+        "phrase": "各种不同的人生",
+        "change": "氵",
+        "replace": "洛沖㳅洞汋汄泩"
+    },
+    {
+        "id": 2892,
+        "phrase": "各种不同的方式",
+        "change": "氵",
+        "replace": "洛沖㳅洞汋汸江"
+    },
+    {
+        "id": 2895,
+        "phrase": "采摘园里的生活",
+        "change": "亻",
+        "replace": "倸㒀园俚仢生佸"
+    },
+    {
+        "id": 2898,
+        "phrase": "请注意交通安全",
+        "change": "氵",
+        "replace": "清主澺洨涌洝洤"
+    },
+    {
+        "id": 2899,
+        "phrase": "各种风格的画作",
+        "change": "扌",
+        "replace": "挌种风挌扚画拃"
+    },
+    {
+        "id": 2904,
+        "phrase": "采桑子的节奏快",
+        "change": "扌",
+        "replace": "採搡子扚节揍抉"
+    },
+    {
+        "id": 2956,
+        "phrase": "这里风景很优美",
+        "change": "讠",
+        "replace": "这里讽谅很优美"
+    },
+    {
+        "id": 2958,
+        "phrase": "分秒必争的努力",
+        "change": "扌",
+        "replace": "扮抄㧙挣扚努扐"
+    },
+    {
+        "id": 2960,
+        "phrase": "这里有很多沙子",
+        "change": "讠",
+        "replace": "这里有很多妙子"
+    },
+    {
+        "id": 2969,
+        "phrase": "各种样式的款式",
+        "change": "讠",
+        "replace": "各种详试的款试"
+    },
+    {
+        "id": 2983,
+        "phrase": "分秒必争的学习",
+        "change": "氵",
+        "replace": "汾沙泌浄汋学习"
+    },
+    {
+        "id": 2988,
+        "phrase": "注意节约每滴水",
+        "change": "亻",
+        "replace": "住億节仢侮㒀㲻"
+    },
+    {
+        "id": 2991,
+        "phrase": "分工合作效率高",
+        "change": "氵",
+        "replace": "汾江洽泎滧率滈"
+    },
+    {
+        "id": 3007,
+        "phrase": "这份工作不简单",
+        "change": "扌",
+        "replace": "抆扮扛拃抔简掸"
+    },
+    {
+        "id": 3013,
+        "phrase": "各种不同的人生",
+        "change": "犭",
+        "replace": "狢狆不狪犳人狌"
+    },
+    {
+        "id": 3020,
+        "phrase": "请告诉我这事儿",
+        "change": "犭",
+        "replace": "猜告诉我这事儿"
+    },
+    {
+        "id": 3031,
+        "phrase": "各种不同的选择",
+        "change": "亻",
+        "replace": "佫仲伓侗仢侁择"
+    },
+    {
+        "id": 3032,
+        "phrase": "请注意交通安全",
+        "change": "钅",
+        "replace": "锖注镱铰通铵铨"
+    },
+    {
+        "id": 3036,
+        "phrase": "各种各样的想法",
+        "change": "犭",
+        "replace": "狢狆狢样犳想㹤"
+    },
+    {
+        "id": 3066,
+        "phrase": "各种不同的人生",
+        "change": "钅",
+        "replace": "铬钟钚铜钓人生"
+    },
+    {
+        "id": 3068,
+        "phrase": "分工明确效率高",
+        "change": "钅",
+        "replace": "分工钥确铰率镐"
+    },
+    {
+        "id": 3074,
+        "phrase": "青山依旧在眼前",
+        "change": "钅",
+        "replace": "锖山铱旧在银前"
+    },
+    {
+        "id": 3087,
+        "phrase": "他在书房里写字",
+        "change": "钅",
+        "replace": "他在书钫锂䥾字"
+    },
+    {
+        "id": 3107,
+        "phrase": "这一份感情真挚",
+        "change": "钅",
+        "replace": "这一份感锖镇挚"
+    },
+    {
+        "id": 3141,
+        "phrase": "各种各样的想法",
+        "change": "钅",
+        "replace": "铬钟铬样钓想法"
+    },
+    {
+        "id": 3161,
+        "phrase": "分秒必争的奋斗",
+        "change": "氵",
+        "replace": "汾沙泌浄汋沺㳆"
+    },
+    {
+        "id": 3168,
+        "phrase": "这里的风景很美",
+        "change": "犭",
+        "replace": "这狸犳风猄狠美"
+    },
+    {
+        "id": 3171,
+        "phrase": "采桑子的古典美",
+        "change": "犭",
+        "replace": "采桑子犳狜猠美"
+    },
+    {
+        "id": 3177,
+        "phrase": "借问酒家何处有",
+        "change": "扌",
+        "replace": "措扣酒家抲扑有"
+    },
+    {
+        "id": 3186,
+        "phrase": "晴川历历汉阳树",
+        "change": "讠",
+        "replace": "请训历历汉阳树"
+    },
+    {
+        "id": 3194,
+        "phrase": "春蚕到死丝方尽",
+        "change": "氵",
+        "replace": "湷蚕洷死丝汸浕"
+    },
+    {
+        "id": 3218,
+        "phrase": "请问您贵姓大名",
+        "change": "氵",
+        "replace": "清问您溃泩汏洺"
+    },
+    {
+        "id": 3228,
+        "phrase": "请给出你的解释",
+        "change": "氵",
+        "replace": "清洽泏沵汋澥泽"
+    },
+    {
+        "id": 3233,
+        "phrase": "谁也逃不出法网",
+        "change": "氵",
+        "replace": "淮池洮㳅泏去网"
+    },
+    {
+        "id": 3236,
+        "phrase": "分散大家的注意力",
+        "change": "氵",
+        "replace": "汾潵汏家汋主澺氻"
+    },
+    {
+        "id": 3237,
+        "phrase": "分散大家的注意力",
+        "change": "扌",
+        "replace": "扮撒大家扚拄揞扐"
+    },
+    {
+        "id": 3238,
+        "phrase": "分散大家的注意力",
+        "change": "钅",
+        "replace": "分散大镓钓注镱力"
+    },
+    {
+        "id": 3242,
+        "phrase": "精诚所至金石为开",
+        "change": "讠",
+        "replace": "请成䜣至金石为开"
+    },
+    {
+        "id": 3243,
+        "phrase": "各抒己见的研讨会",
+        "change": "氵",
+        "replace": "洛汿己见汋汧讨浍"
+    },
+    {
+        "id": 3257,
+        "phrase": "主要负责人的职责",
+        "change": "氵",
+        "replace": "注㴗负渍汄汋职渍"
+    },
+    {
+        "id": 3264,
+        "phrase": "主要成份标签说明",
+        "change": "氵",
+        "replace": "注㴗成汾沶签涚㳉"
+    },
+    {
+        "id": 3268,
+        "phrase": "分布式架构的设计",
+        "change": "扌",
+        "replace": "扮抪拭拁抅扚投计"
+    },
+    {
+        "id": 3278,
+        "phrase": "请你认真听我说话",
+        "change": "扌",
+        "replace": "掅你认搷折㧴捝括"
+    },
+    {
+        "id": 3281,
+        "phrase": "谁能理解我的心情",
+        "change": "扌",
+        "replace": "推㨢捚解㧴扚抋掅"
+    },
+    {
+        "id": 3285,
+        "phrase": "请在这里签下姓名",
+        "change": "氵",
+        "replace": "清在汶浬签下泩洺"
+    },
+    {
+        "id": 3289,
+        "phrase": "唤醒内心深处记忆",
+        "change": "扌",
+        "replace": "换醒抐抋探扑记忆"
+    },
+    {
+        "id": 3291,
+        "phrase": "份量十足的工作餐",
+        "change": "氵",
+        "replace": "汾量汁浞汋江泎餐"
+    },
+    {
+        "id": 3293,
+        "phrase": "谁在外面大声说话",
+        "change": "扌",
+        "replace": "推在扑面大声捝括"
+    },
+    {
+        "id": 3297,
+        "phrase": "也就是这一两天事",
+        "change": "扌",
+        "replace": "扡㩆提抆一两天事"
+    },
+    {
+        "id": 3303,
+        "phrase": "仑理道德基本准则",
+        "change": "讠",
+        "replace": "论理道德基本谁则"
+    },
+    {
+        "id": 3308,
+        "phrase": "分秒必争完成任务",
+        "change": "扌",
+        "replace": "扮抄㧙挣捖成拰务"
+    },
+    {
+        "id": 3312,
+        "phrase": "主要原因是天气冷",
+        "change": "扌",
+        "replace": "拄要原㧢提天㧉拎"
+    },
+    {
+        "id": 3318,
+        "phrase": "分工明确提高效率",
+        "change": "扌",
+        "replace": "扮扛抈捔是搞挍摔"
+    },
+    {
+        "id": 3320,
+        "phrase": "仑理道德基本要求",
+        "change": "车",
+        "replace": "轮理道德基本要求"
+    },
+    {
+        "id": 3323,
+        "phrase": "仓库里货已经卖完",
+        "change": "扌",
+        "replace": "抢库捚货已经卖捖"
+    },
+    {
+        "id": 3331,
+        "phrase": "各种知识应用实践",
+        "change": "氵",
+        "replace": "洛沖知识应用实浅"
+    },
+    {
+        "id": 3345,
+        "phrase": "不要轻易放弃机会",
+        "change": "讠",
+        "replace": "不要轻易访弃讥会"
+    },
+    {
+        "id": 3346,
+        "phrase": "这里的交通很方便",
+        "change": "讠",
+        "replace": "这里的交诵很访便"
+    },
+    {
+        "id": 3358,
+        "phrase": "这是他的个人隐私",
+        "change": "氵",
+        "replace": "汶湜池汋个汄㴔私"
+    },
+    {
+        "id": 3375,
+        "phrase": "此地一为别孤蓬万里",
+        "change": "氵",
+        "replace": "泚池一沩别泒浲万浬"
+    },
+    {
+        "id": 3384,
+        "phrase": "各种颜色的花朵开放",
+        "change": "氵",
+        "replace": "洛沖颜色汋㳸㲹汧汸"
+    },
+    {
+        "id": 3385,
+        "phrase": "精益求精的工作态度",
+        "change": "讠",
+        "replace": "请谥求请的讧诈态度"
+    },
+    {
+        "id": 3391,
+        "phrase": "清晨的阳光洒满大地",
+        "change": "讠",
+        "replace": "请晨的阳光洒满大地"
+    },
+    {
+        "id": 3401,
+        "phrase": "分布式系统的稳定性",
+        "change": "扌",
+        "replace": "扮抪拭系㧤扚稳掟性"
+    },
+    {
+        "id": 3403,
+        "phrase": "请大家保持安静环境",
+        "change": "氵",
+        "replace": "清汏家湺洔洝瀞㳅滰"
+    },
+    {
+        "id": 3405,
+        "phrase": "各抒己见的学术讨论",
+        "change": "氵",
+        "replace": "洛汿己见汋学沭讨沦"
+    },
+    {
+        "id": 3406,
+        "phrase": "请你仔细阅读说明书",
+        "change": "氵",
+        "replace": "清沵汓沺涚渎涚㳉书"
+    },
+    {
+        "id": 3409,
+        "phrase": "各种各样的生活用品",
+        "change": "扌",
+        "replace": "挌种挌样扚生括拥品"
+    },
+    {
+        "id": 3414,
+        "phrase": "也会有各种生活压力",
+        "change": "氵",
+        "replace": "池浍洧洛沖泩舌压氻"
+    },
+    {
+        "id": 3415,
+        "phrase": "请说明你的具体理由",
+        "change": "氵",
+        "replace": "清涚㳉沵汋具泍浬油"
+    },
+    {
+        "id": 3426,
+        "phrase": "分别之后的思念情感",
+        "change": "氵",
+        "replace": "汾别之洉汋㴓淰清澸"
+    },
+    {
+        "id": 3429,
+        "phrase": "分秒必争的抢答环节",
+        "change": "氵",
+        "replace": "汾沙泌浄汋沧洽㳅节"
+    },
+    {
+        "id": 3432,
+        "phrase": "请认真完成这份作业",
+        "change": "氵",
+        "replace": "清汄滇浣成汶汾泎业"
+    },
+    {
+        "id": 3438,
+        "phrase": "谁人识得庐山真面目",
+        "change": "扌",
+        "replace": "推人抧得护山搷面目"
+    },
+    {
+        "id": 3441,
+        "phrase": "分秒必争地完成任务",
+        "change": "扌",
+        "replace": "扮抄㧙挣扡捖成拰务"
+    },
+    {
+        "id": 3450,
+        "phrase": "我们要共同保护环境",
+        "change": "氵",
+        "replace": "我们㴗洪洞湺沪㳅滰"
+    },
+    {
+        "id": 3456,
+        "phrase": "我们的目标是一致的",
+        "change": "氵",
+        "replace": "我们汋泪沶湜一㴛汋"
+    },
+    {
+        "id": 3462,
+        "phrase": "他的话非常有说服力",
+        "change": "忄",
+        "replace": "忚㣿恬悱惝㤢悦服忇"
+    },
+    {
+        "id": 3467,
+        "phrase": "远看山有色近听水无声",
+        "change": "扌",
+        "replace": "抏看山有色折折水抚声"
+    },
+    {
+        "id": 3471,
+        "phrase": "请大家仔细阅读说明书",
+        "change": "扌",
+        "replace": "掅大家仔细捝读捝抈书"
+    },
+    {
+        "id": 3473,
+        "phrase": "主要任务是提高生产力",
+        "change": "氵",
+        "replace": "注㴗㳝务湜湜滈泩浐氻"
+    },
+    {
+        "id": 3475,
+        "phrase": "也就是说这件事没商量",
+        "change": "扌",
+        "replace": "扡㩆提捝抆件事投商担"
+    },
+    {
+        "id": 3480,
+        "phrase": "主要成分标签上有说明",
+        "change": "扌",
+        "replace": "拄要成扮标捡上有捝抈"
+    },
+    {
+        "id": 3494,
+        "phrase": "请你认真思考这个问题",
+        "change": "氵",
+        "replace": "清沵汄滇㴓洘汶个问湜"
+    },
+    {
+        "id": 3500,
+        "phrase": "分秒必争的工作状态中",
+        "change": "氵",
+        "replace": "汾沙泌浄汋江泎状汰沖"
+    },
+    {
+        "id": 3512,
+        "phrase": "请发表你对这件事看法",
+        "change": "氵",
+        "replace": "清泼表沵㳔汶汼事看去"
+    },
+    {
+        "id": 3515,
+        "phrase": "兼职工作的种类有很多",
+        "change": "讠",
+        "replace": "谦识讧诈的种类有很多"
+    },
+    {
+        "id": 3521,
+        "phrase": "主权利益高于个人利益",
+        "change": "亻",
+        "replace": "住仅俐益傐㐵个人俐益"
+    },
+    {
+        "id": 3528,
+        "phrase": "采得百花成蜜后的甜度",
+        "change": "扌",
+        "replace": "採得百花成蜜㧨扚拑度"
+    },
+    {
+        "id": 3538,
+        "phrase": "仓皇失措地逃离了现场",
+        "change": "氵",
+        "replace": "沧湟泆㳻池洮漓了现汤"
+    },
+    {
+        "id": 3555,
+        "phrase": "也就是这两天的事情了",
+        "change": "扌",
+        "replace": "扡㩆提抆天两扚事掅了"
+    },
+    {
+        "id": 3569,
+        "phrase": "消除误会需要真诚交流",
+        "change": "讠",
+        "replace": "诮除吴会需要真成交流"
+    },
+    {
+        "id": 3578,
+        "phrase": "这种情况下需要多冷静",
+        "change": "氵",
+        "replace": "汶沖清況下濡㴗多泠瀞"
+    },
+    {
+        "id": 3598,
+        "phrase": "仓库保管员正在点数目",
+        "change": "氵",
+        "replace": "沧库湺涫涢泟在沾溇泪"
+    },
+    {
+        "id": 3606,
+        "phrase": "占领高地是获胜的关键",
+        "change": "氵",
+        "replace": "沾泠滈池湜获泩汋浂湕"
+    },
+    {
+        "id": 3612,
+        "phrase": "反腐倡廉的社会风气好",
+        "change": "饣",
+        "replace": "饭腐倡廉的社会风饩好"
+    },
+    {
+        "id": 3621,
+        "phrase": "良药苦口利于病重患者",
+        "change": "犭",
+        "replace": "狼药狜口猁于病重患猪"
+    },
+    {
+        "id": 3630,
+        "phrase": "饶有兴趣地观察着世界",
+        "change": "氵",
+        "replace": "浇洧兴洱池汉漈洋泄界"
+    },
+    {
+        "id": 3642,
+        "phrase": "披荆斩棘的奋斗精神中",
+        "change": "氵",
+        "replace": "波荆渐棘汋沺㳆清神沖"
+    },
+    {
+        "id": 3647,
+        "phrase": "腕力比赛是非常激烈的",
+        "change": "氵",
+        "replace": "涴氻沘赛湜渄淌敫洌汋"
+    },
+    {
+        "id": 3653,
+        "phrase": "三个臭皮匠赛过诸葛亮",
+        "change": "氵",
+        "replace": "三个溴波沂赛㳡渚渴湸"
+    },
+    {
+        "id": 3655,
+        "phrase": "请不要在这里大声喧哗",
+        "change": "氵",
+        "replace": "清㳅㴗在汶浬汏声渲哗"
+    },
+    {
+        "id": 3657,
+        "phrase": "举头望明月低头思故乡",
+        "change": "氵",
+        "replace": "举头望㳉㳉泜头㴓沽乡"
+    },
+    {
+        "id": 3660,
+        "phrase": "谁言寸草心报得三春晖",
+        "change": "氵",
+        "replace": "淮言寸草沁报淂三湷晖"
+    },
+    {
+        "id": 3666,
+        "phrase": "分门别类地存放各种物品",
+        "change": "氵",
+        "replace": "汾门别汏池洊汸洛沖沕品"
+    },
+    {
+        "id": 3670,
+        "phrase": "清风徐来水波不兴的意境",
+        "change": "讠",
+        "replace": "请讽徐来水诐不兴的谙境"
+    },
+    {
+        "id": 3675,
+        "phrase": "谁能想到结局会是这种结果",
+        "change": "氵",
+        "replace": "淮㴰湘洷洁局浍湜汶沖洁淉"
+    },
+    {
+        "id": 3681,
+        "phrase": "各种不同的声音汇聚在一起",
+        "change": "氵",
+        "replace": "洛沖㳅洞汋声湆匚㵵在一起"
+    },
+    {
+        "id": 3682,
+        "phrase": "这种情况确实非常令人费解",
+        "change": "讠",
+        "replace": "这种请况确实诽常令认费解"
+    },
+    {
+        "id": 3683,
+        "phrase": "也许时间会证明一切的对错",
+        "change": "氵",
+        "replace": "池浒时涧浍泟㳉一沏汋㳔㳻"
+    },
+    {
+        "id": 3689,
+        "phrase": "每一个季节都有它独特的魅力",
+        "change": "氵",
+        "replace": "海一个季节渚洧沱浊洔汋魅氻"
+    },
+    {
+        "id": 3697,
+        "phrase": "谁主沉浮的时代豪情气吞山河",
+        "change": "氵",
+        "replace": "淮注冗孚汋时代濠清汽吞汕可"
+    },
+    {
+        "id": 3701,
+        "phrase": "这个主要的原因目前还不清楚",
+        "change": "木",
+        "replace": "这个柱楆杓榞栶相㮍杯杯棈檚"
+    },
+    {
+        "id": 3705,
+        "phrase": "各种因素综合作用导致的结果",
+        "change": "氵",
+        "replace": "洛沖洇溸淙洽泎用汜㴛汋洁淉"
+    },
+    {
+        "id": 3706,
+        "phrase": "这种做法完全不符合相关规定",
+        "change": "讠",
+        "replace": "这种做法完诠不符合相关规定"
+    },
+    {
+        "id": 3710,
+        "phrase": "每个周末我都会去图书馆看书",
+        "change": "氵",
+        "replace": "海个淍沫我渚浍法泈书涫看书"
+    },
+    {
+        "id": 3715,
+        "phrase": "请在这个表格上填写相关信息",
+        "change": "氵",
+        "replace": "清在汶个表洛上滇泻湘浂信㴧"
+    },
+    {
+        "id": 3716,
+        "phrase": "也许我们应该换一种解决思路",
+        "change": "氵",
+        "replace": "池浒我们应该涣一沖澥決㴓潞"
+    },
+    {
+        "id": 3722,
+        "phrase": "格调高雅的环境让人心旷神怡",
+        "change": "氵",
+        "replace": "洛淍滈雅汋㳅滰让汄沁㲿神治"
+    },
+    {
+        "id": 3723,
+        "phrase": "这种事情发生的概率微乎其微",
+        "change": "讠",
+        "replace": "这种事请发生的概率微乎其微"
+    },
+    {
+        "id": 3724,
+        "phrase": "这种情况的后果将会非常严重",
+        "change": "讠",
+        "replace": "这种请况的诟课将会诽常严重"
+    },
+    {
+        "id": 3728,
+        "phrase": "请大家在开会时保持手机静音",
+        "change": "氵",
+        "replace": "清汏家在汧浍时湺洔手㲹瀞湆"
+    },
+    {
+        "id": 3729,
+        "phrase": "这种变化对我们来说是件好事",
+        "change": "讠",
+        "replace": "这种变讹对我们来兑是件好事"
+    },
+    {
+        "id": 3733,
+        "phrase": "谁言寸草心报得三春晖的深情",
+        "change": "氵",
+        "replace": "淮言寸草沁报淂三湷晖汋罙清"
+    },
+    {
+        "id": 3734,
+        "phrase": "谁见汀洲上相思摇紫菱的意蕴",
+        "change": "氵",
+        "replace": "淮见丁州上湘㴓摇泚淩汋澺蕴"
+    },
+    {
+        "id": 3735,
+        "phrase": "采得百花成蜜后为谁辛苦为谁甜",
+        "change": "氵",
+        "replace": "采淂洦㳸成淧洉沩淮㳯沽沩淮㵇"
+    },
+    {
+        "id": 3738,
+        "phrase": "每一个孩子都是降临人间的天使",
+        "change": "氵",
+        "replace": "海一个孩汓渚湜洚临汄涧汋天㳏"
+    },
+    {
+        "id": 3739,
+        "phrase": "谁也无法替代他在我心中的位置",
+        "change": "氵",
+        "replace": "淮池无去潜代池在我沁沖汋涖淔"
+    },
+    {
+        "id": 3741,
+        "phrase": "主要原因是由很多种因素组成的",
+        "change": "氵",
+        "replace": "注㴗源洇湜油泿多沖洇溸沮成汋"
+    },
+    {
+        "id": 3743,
+        "phrase": "这是一个很长很动人的历史故事",
+        "change": "钅",
+        "replace": "这是一个银长银动人钓历史钴事"
+    },
+    {
+        "id": 3744,
+        "phrase": "每个人都有追求自己梦想的权利",
+        "change": "氵",
+        "replace": "海个汄渚洧追浗洎己梦湘汋汉浰"
+    },
+    {
+        "id": 3745,
+        "phrase": "他是一个非常有抱负和远见的人",
+        "change": "氵",
+        "replace": "池湜一个渄淌洧泡负和沅见汋汄"
+    },
+    {
+        "id": 3746,
+        "phrase": "请保持室内整洁卫生的良好环境",
+        "change": "氵",
+        "replace": "清湺洔洷汭整吉卫泩汋浪汓㳅滰"
+    },
+    {
+        "id": 3747,
+        "phrase": "也许明天就会出现转机也说不定",
+        "change": "氵",
+        "replace": "池浒㳉天涼浍泏现转㲹池涚㳅淀"
+    },
+    {
+        "id": 3749,
+        "phrase": "谁也逃不出法律制裁的严密天网",
+        "change": "氵",
+        "replace": "淮池洮㳅泏去津淛裁汋严滵天网"
+    },
+    {
+        "id": 3750,
+        "phrase": "这是一个主要的战略任务和目标",
+        "change": "氵",
+        "replace": "汶湜一个注㴗汋沾洛㳝务和泪沶"
+    },
+    {
+        "id": 3751,
+        "phrase": "这里的交通网络非常发达且方便",
+        "change": "讠",
+        "replace": "这里的交诵网络诽常发达诅访便"
+    },
+    {
+        "id": 3754,
+        "phrase": "请问这里怎么去最近的地铁站呢",
+        "change": "氵",
+        "replace": "清问汶浬泎么法㵊沂汋池泆沾泥"
+    },
+    {
+        "id": 3755,
+        "phrase": "每一个精彩的瞬间都值得被铭记",
+        "change": "氵",
+        "replace": "海一个清彩汋瞬涧渚淔淂波洺记"
+    },
+    {
+        "id": 3757,
+        "phrase": "他的性格非常古怪让人难以捉摸",
+        "change": "氵",
+        "replace": "池汋泩洛渄淌沽怪让汄滩泤浞漠"
+    },
+    {
+        "id": 3758,
+        "phrase": "份内的工作一定要保质保量完成",
+        "change": "氵",
+        "replace": "汾汭汋江泎一淀㴗湺质湺量浣成"
+    },
+    {
+        "id": 3759,
+        "phrase": "主要任务是提高生产的综合效率",
+        "change": "氵",
+        "replace": "注㴗㳝务湜湜滈泩浐汋淙洽滧率"
+    },
+    {
+        "id": 3760,
+        "phrase": "天生我材必有用千金散尽还复来",
+        "change": "氵",
+        "replace": "天泩我材泌洧用汘淦潵浕㳅复涞"
+    },
+    {
+        "id": 3763,
+        "phrase": "主要内容包括以下几个核心方面",
+        "change": "氵",
+        "replace": "注㴗汭溶泡活泤下㲹个核沁汸湎"
+    },
+    {
+        "id": 3767,
+        "phrase": "主要功能是提供实时的环境监测",
+        "change": "氵",
+        "replace": "注㴗氻㴰湜湜洪实时汋㳅滰滥则"
+    },
+    {
+        "id": 3768,
+        "phrase": "各种原材料的价格都在大幅波动",
+        "change": "氵",
+        "replace": "洛沖源材㳆汋价洛渚在汏湢皮沄"
+    },
+    {
+        "id": 3770,
+        "phrase": "也许这只是一个美丽的误会而已",
+        "change": "氵",
+        "replace": "池浒汶只湜一个渼丽汋洖浍洏已"
+    },
+    {
+        "id": 3771,
+        "phrase": "每个人都有选择自己生活的权利",
+        "change": "氵",
+        "replace": "海个汄渚洧洗泽洎己泩舌汋汉浰"
+    },
+    {
+        "id": 3774,
+        "phrase": "请保持图书馆内的安静以及整洁",
+        "change": "氵",
+        "replace": "清湺洔泈书涫汭汋洝瀞泤汲整吉"
+    },
+    {
+        "id": 3780,
+        "phrase": "每个人都应该对自己的行为负责",
+        "change": "氵",
+        "replace": "海个汄渚应该㳔洎己汋洐沩负渍"
+    },
+    {
+        "id": 3782,
+        "phrase": "请注意这里的地面湿滑小心摔倒",
+        "change": "氵",
+        "replace": "清主澺汶浬汋池湎显骨小沁摔倒"
+    },
+    {
+        "id": 3788,
+        "phrase": "也许这就是我们共同努力的结果",
+        "change": "氵",
+        "replace": "池浒汶涼湜我们洪洞汉氻汋洁淉"
+    },
+    {
+        "id": 3797,
+        "phrase": "这种情况在当前环境下非常罕见",
+        "change": "讠",
+        "replace": "这种请况在当前环境下诽常罕见"
+    },
+    {
+        "id": 3800,
+        "phrase": "每一场比赛都要全力以赴去拼搏",
+        "change": "氵",
+        "replace": "海一汤沘赛渚㴗洤氻泤赴法洴溥"
+    },
+    {
+        "id": 3804,
+        "phrase": "请务必在截止日期前提交申请表",
+        "change": "氵",
+        "replace": "清务泌在截沚汨淇湔湜洨申清表"
+    },
+    {
+        "id": 3808,
+        "phrase": "每一份心意都值得被温柔地对待",
+        "change": "氵",
+        "replace": "海一汾沁澺渚淔淂波昷渘池㳔洔"
+    },
+    {
+        "id": 3809,
+        "phrase": "谁也无法抵挡时代潮流滚滚向前",
+        "change": "氵",
+        "replace": "淮池无去泜挡时代朝㐬衮衮向湔"
+    },
+    {
+        "id": 3810,
+        "phrase": "这里的环境十分清幽适合修生养性",
+        "change": "讠",
+        "replace": "这里的环境计分请幽话合修生养性"
+    },
+    {
+        "id": 3812,
+        "phrase": "每一个微小的细节都不能轻易放过",
+        "change": "氵",
+        "replace": "海一个㵟小汋沺节渚㳅㴰泾沕汸㳡"
+    },
+    {
+        "id": 3814,
+        "phrase": "保持良好的心态是成功的关键因素",
+        "change": "氵",
+        "replace": "湺洔浪汓汋沁汰湜成氻汋浂湕洇溸"
+    },
+    {
+        "id": 3819,
+        "phrase": "情况并没有想象中那么复杂和糟糕",
+        "change": "讠",
+        "replace": "请况并设有想象中那么复杂和糟糕"
+    },
+    {
+        "id": 3823,
+        "phrase": "这份沉甸甸的礼物代表了我的心意",
+        "change": "氵",
+        "replace": "汶汾冗甸甸汋礼沕代表了我汋沁澺"
+    },
+    {
+        "id": 3824,
+        "phrase": "各种各样的鲜花在春天里竞相开放",
+        "change": "氵",
+        "replace": "洛沖洛洋汋洋㳸在湷天浬竞湘汧汸"
+    },
+    {
+        "id": 3828,
+        "phrase": "主要的矛盾点在于双方的沟通不足",
+        "change": "氵",
+        "replace": "注㴗汋矛盾沾在汙汉汸汋勾涌㳅浞"
+    },
+    {
+        "id": 3829,
+        "phrase": "谁也无法准确预测股市的未来走势",
+        "change": "氵",
+        "replace": "淮池无去淮确滪则没沛汋沬涞走势"
+    },
+    {
+        "id": 3830,
+        "phrase": "情境教学法能有效激发学生的兴趣",
+        "change": "讠",
+        "replace": "请境教学法能有效激发学生的兴诹"
+    },
+    {
+        "id": 3838,
+        "phrase": "各种各样的美食让人感到垂涎欲滴",
+        "change": "氵",
+        "replace": "洛沖洛洋汋渼湌让汄澸洷涶延浴啇"
+    },
+    {
+        "id": 3847,
+        "phrase": "谁能想到最终的结局会是这种结果",
+        "change": "氵",
+        "replace": "淮㴰湘洷㵊泈汋洁局浍湜汶沖洁淉"
+    },
+    {
+        "id": 3848,
+        "phrase": "清晨的露珠在绿色的叶尖上闪烁着",
+        "change": "讠",
+        "replace": "请晨的露诛在绿色的计尖让认烁详"
+    },
+    {
+        "id": 3850,
+        "phrase": "请保持公共场所的卫生整洁与安静",
+        "change": "氵",
+        "replace": "清湺洔㳂洪汤沂汋卫泩整吉与洝瀞"
+    },
+    {
+        "id": 3851,
+        "phrase": "谁知盘中餐粒粒皆辛苦的勤俭美德",
+        "change": "氵",
+        "replace": "淮知洀沖餐泣泣湝㳯沽汋漌俭渼德"
+    },
+    {
+        "id": 3853,
+        "phrase": "每一份努力都应当得到应有的尊重",
+        "change": "氵",
+        "replace": "海一汾汉氻渚应当淂洷应洧汋澊湩"
+    },
+    {
+        "id": 3854,
+        "phrase": "请注意观察实验数据中的细微波动",
+        "change": "氵",
+        "replace": "清主澺汉漈实验溇涺沖汋沺㵟皮沄"
+    },
+    {
+        "id": 3856,
+        "phrase": "主要的原因在于技术方案的不成熟",
+        "change": "氵",
+        "replace": "注㴗汋源洇在汙汥沭汸洝汋㳅成熟"
+    },
+    {
+        "id": 3859,
+        "phrase": "这种情况带来的后果是不可估量的",
+        "change": "讠",
+        "replace": "这种请况带来的诟课是不诃诂量的"
+    },
+    {
+        "id": 3867,
+        "phrase": "各种先进的技术在这里得到了应用",
+        "change": "氵",
+        "replace": "洛沖洗汫汋汥沭在汶浬淂洷了应用"
+    },
+    {
+        "id": 3869,
+        "phrase": "也许这就是我们要追求的最终理想",
+        "change": "氵",
+        "replace": "池浒汶涼湜我们㴗追浗汋㵊泈浬湘"
+    },
+    {
+        "id": 3870,
+        "phrase": "每个人的生命都是一首独特的长诗",
+        "change": "氵",
+        "replace": "海个汄汋泩命渚湜一渞浊洔汋长洔"
+    },
+    {
+        "id": 3871,
+        "phrase": "这种情况下的风险评估一定要做足",
+        "change": "讠",
+        "replace": "这种请况下的讽险平诂一定要做足"
+    },
+    {
+        "id": 3872,
+        "phrase": "各种美好的愿望在这一刻汇聚起来",
+        "change": "氵",
+        "replace": "洛沖渼汓汋源望在汶一刻匚㵵起涞"
+    },
+    {
+        "id": 3880,
+        "phrase": "也许这就是我们追求一生想要的结果",
+        "change": "氵",
+        "replace": "池浒汶涼湜我们追浗一泩湘㴗汋洁淉"
+    },
+    {
+        "id": 3881,
+        "phrase": "每个人的性格中都有不为人知的一面",
+        "change": "氵",
+        "replace": "海个汄汋泩洛沖渚洧㳅沩汄知汋一湎"
+    },
+    {
+        "id": 3883,
+        "phrase": "这种情况在现代社会中其实非常普遍",
+        "change": "讠",
+        "replace": "这种请况在现代社会中其实诽常谱谝"
+    },
+    {
+        "id": 3887,
+        "phrase": "这种情况在日常生活中其实司空见惯",
+        "change": "讠",
+        "replace": "这种请况在日常生话中其实词讧见惯"
+    },
+    {
+        "id": 3888,
+        "phrase": "这里的环境非常清幽适合在午后写字",
+        "change": "讠",
+        "replace": "这里的环境诽常请幽话合在许诟写字"
+    },
+    {
+        "id": 3889,
+        "phrase": "这种情况在很多关键的时候都会发生",
+        "change": "讠",
+        "replace": "这种请况在很多关键的讨候诸会发生"
+    },
+    {
+        "id": 3895,
+        "phrase": "也许我们可以尝试换个角度去解决它",
+        "change": "氵",
+        "replace": "池浒我们河泤尝试涣个角渡法澥決沱"
+    },
+    {
+        "id": 3896,
+        "phrase": "主要任务是不断提高生产工作的效率",
+        "change": "氵",
+        "replace": "注㴗㳝务湜㳅断湜滈泩浐江泎汋滧率"
+    },
+    {
+        "id": 3898,
+        "phrase": "各种各样的可能性都在未来的道路上",
+        "change": "氵",
+        "replace": "洛沖洛洋汋河㴰泩渚在沬涞汋道潞上"
+    },
+    {
+        "id": 3900,
+        "phrase": "这种情况在人类历史上其实并不罕见",
+        "change": "讠",
+        "replace": "这种请况在认类历史让其实并不罕见"
+    },
+    {
+        "id": 3907,
+        "phrase": "请注意观察实验过程中出现的细微变化",
+        "change": "氵",
+        "replace": "清主澺汉漈实验㳡浧沖泏现汋沺㵟洂沎"
+    },
+    {
+        "id": 3908,
+        "phrase": "也许这只是我们生命中一个短暂的插曲",
+        "change": "氵",
+        "replace": "池浒汶只湜我们泩命沖一个浢渐汋插浀"
+    },
+    {
+        "id": 3909,
+        "phrase": "主要的原因在于我们缺乏核心竞争技术",
+        "change": "氵",
+        "replace": "注㴗汋源洇在汙我们決泛核沁竞浄汥沭"
+    },
+    {
+        "id": 3910,
+        "phrase": "每一个细节的失误都可能导致最终失败",
+        "change": "氵",
+        "replace": "海一个沺节汋泆洖渚河㴰汜㴛㵊泈泆败"
+    },
+    {
+        "id": 3912,
+        "phrase": "在这个主要的方向上我们要保持一致性",
+        "change": "木",
+        "replace": "在这个柱楆杓枋向上我闲楆椺㭙未枚栍"
+    },
+    {
+        "id": 3916,
+        "phrase": "这种情况在目前的技术条件下很难实现",
+        "change": "讠",
+        "replace": "这种请况在目前的技术条件下很难实现"
+    },
+    {
+        "id": 3917,
+        "phrase": "主要的功能模块已经完成了初步的开发",
+        "change": "氵",
+        "replace": "注㴗汋氻㴰漠決已泾浣成了初涉汋汧泼"
+    },
+    {
+        "id": 3922,
+        "phrase": "请注意交通规则保护好自己的人身安全",
+        "change": "氵",
+        "replace": "清主澺洨涌规测湺沪汓洎己汋汄身洝洤"
+    },
+    {
+        "id": 3923,
+        "phrase": "也许这就是成长过程中必须面对的挑战",
+        "change": "氵",
+        "replace": "池浒汶涼湜成长㳡浧沖泌须湎㳔汋洮沾"
+    },
+    {
+        "id": 3924,
+        "phrase": "谁也没想到最终的结局会变得如此糟糕",
+        "change": "氵",
+        "replace": "淮池殳湘洷㵊泈汋洁局浍洂淂洳泚漕溔"
+    },
+    {
+        "id": 3925,
+        "phrase": "每一份耕耘都会在未来的某天得到收获",
+        "change": "氵",
+        "replace": "海一汾汫沄渚浍在沬涞汋湈天淂洷收获"
+    },
+    {
+        "id": 3926,
+        "phrase": "各种复杂的关系交织在一起让人很头大",
+        "change": "氵",
+        "replace": "洛沖复杂汋浂系洨织在一起让汄泿头汏"
+    },
+    {
+        "id": 3928,
+        "phrase": "主要矛盾已经从数量转向了质量的提升",
+        "change": "氵",
+        "replace": "注㴗矛盾已泾汄溇量转向了质量汋湜升"
+    },
+    {
+        "id": 3935,
+        "phrase": "每一个为了梦想奋斗的人都值得被尊重",
+        "change": "氵",
+        "replace": "海一个沩了梦湘沺㳆汋汄渚淔淂波澊湩"
+    },
+    {
+        "id": 3937,
+        "phrase": "这里的空气质量非常之清新且宜人身心",
+        "change": "讠",
+        "replace": "这里的讧气质量诽常之请新诅谊认身心"
+    },
+    {
+        "id": 3940,
+        "phrase": "也许这就是我们共同努力想要达到的目标",
+        "change": "氵",
+        "replace": "池浒汶涼湜我们洪洞汉氻湘㴗㳠洷汋泪沶"
+    },
+    {
+        "id": 3950,
+        "phrase": "请保持这里的办公环境整洁以及空气卫生",
+        "change": "氵",
+        "replace": "清湺洔汶浬汋汃㳂㳅滰整吉泤汲涳汽卫泩"
+    },
+    {
+        "id": 3951,
+        "phrase": "每一个不同的季节都有它独特的美丽景象",
+        "change": "氵",
+        "replace": "海一个㳅洞汋季节渚洧沱浊洔汋渼丽澋潒"
+    },
+    {
+        "id": 3956,
+        "phrase": "这种情况带来的危害后果确实是不言而喻的",
+        "change": "讠",
+        "replace": "这种请况带来的诡害诟课确实是不言而谕的"
+    },
+    {
+        "id": 3959,
+        "phrase": "也许这就是我们一直在寻找的那个理想答案",
+        "change": "氵",
+        "replace": "池浒汶涼湜我们一淔在浔㳀汋那个浬湘洽洝"
+    },
+    {
+        "id": 3961,
+        "phrase": "各种形式的文化交流正在世界范围内广泛进行",
+        "change": "氵",
+        "replace": "洛沖汧江汋汶沎洨㐬泟在泄界范涠汭㲿乏汫洐"
+    },
+    {
+        "id": 3965,
+        "phrase": "格调高雅的艺术创作往往能够引起读者的共鸣",
+        "change": "氵",
+        "replace": "洛淍滈雅汋㲸沭沧泎注注㴰够引起渎渚汋洪鸣"
+    },
+    {
+        "id": 3969,
+        "phrase": "也许这就是我们共同努力奋斗最终想要的结果",
+        "change": "氵",
+        "replace": "池浒汶涼湜我们洪洞汉氻沺㳆㵊泈湘㴗汋洁淉"
+    },
+    {
+        "id": 3970,
+        "phrase": "谁家见月能闲坐何处闻灯不看来的人间烟火气",
+        "change": "氵",
+        "replace": "淮家见㳉㴰沐坐河处洱汀㳅看涞汋汄涧洇火汽"
+    },
+    {
+        "id": 3972,
+        "phrase": "请注意观察化学反应过程中产生的细微气体变化",
+        "change": "氵",
+        "replace": "清主澺汉漈沎学汳应㳡浧沖浐泩汋沺㵟汽泍洂沎"
+    },
+    {
+        "id": 3974,
+        "phrase": "保持良好的心态是应对现代生活压力的最好方法",
+        "change": "氵",
+        "replace": "湺洔浪汓汋沁汰湜应㳔现代泩舌压氻汋㵊汓汸去"
+    },
+    {
+        "id": 3975,
+        "phrase": "主要矛盾已经从生存需求转向了更高层次的追求",
+        "change": "氵",
+        "replace": "注㴗矛盾已泾汄泩洊濡浗转向了浭滈沄次汋追浗"
+    },
+    {
+        "id": 3978,
+        "phrase": "主要目标是建立一个完善且高效的资源调配系统",
+        "change": "氵",
+        "replace": "注㴗泪沶湜湕泣一个浣善沮滈滧汋资原淍配系㳘"
+    },
+    {
+        "id": 3980,
+        "phrase": "谁能书阁下不费万黄金的这种豪情壮志确实少见",
+        "change": "氵",
+        "replace": "淮㴰书洛下㳅沸万潢淦汋汶沖濠清壮志确实沙见"
+    },
+    {
+        "id": 3982,
+        "phrase": "每个人都应该为了实现自己的梦想而不断努力拼搏",
+        "change": "氵",
+        "replace": "海个汄渚应该沩了实现洎己汋梦湘洏㳅断汉氻洴溥"
+    },
+    {
+        "id": 3984,
+        "phrase": "各种形式的社会实践活动能有效提高大学生的能力",
+        "change": "氵",
+        "replace": "洛沖汧江汋汢浍实浅舌沄㴰洧滧湜滈汏学泩汋㴰氻"
+    },
+    {
+        "id": 3988,
+        "phrase": "请在这里填写您的真实身份信息和有效的联系地址",
+        "change": "氵",
+        "replace": "清在汶浬滇泻您汋滇实身汾信㴧和洧滧汋浂系池沚"
+    },
+    {
+        "id": 3989,
+        "phrase": "这种不负责任的行为会对社会风气造成极坏的影响",
+        "change": "讠",
+        "replace": "这种不负责任的行为会对社会讽气诰诚极坏的影响"
+    },
+    {
+        "id": 3993,
+        "phrase": "主要任务是负责整个数据中心的安全运维和日常管理",
+        "change": "木",
+        "replace": "柱楆栣务㮛㭥责整个楼椐中杺杓案栓枟椎和杲棠棺梩"
+    },
+    {
+        "id": 3996,
+        "phrase": "谁言寸草心报得三春晖这种深厚的情谊让人深受感动",
+        "change": "氵",
+        "replace": "淮言寸草沁报淂三湷晖汶沖罙厚汋清谊让汄罙涭澸沄"
+    },
+    {
+        "id": 3997,
+        "phrase": "也许我们应该学会从另一个全新的视角来观察这个世界",
+        "change": "氵",
+        "replace": "池浒我们应该学浍汄氻一个洤澵汋视角涞汉漈汶个泄界"
+    },
+    {
+        "id": 3999,
+        "phrase": "主要矛盾的解决需要我们拿出更大的勇气和坚定的决心",
+        "change": "氵",
+        "replace": "注㴗矛盾汋澥決濡㴗我们洽泏浭汏汋湧汽和坚淀汋決沁"
+    },
+    {
+        "id": 4005,
+        "phrase": "主要的原则是确保每一位参与者都能公平公正地获得机会",
+        "change": "氵",
+        "replace": "注㴗汋源测湜确湺海一涖渗与渚渚㴰㳂泙㳂泟池获淂㲹浍"
+    },
+    {
+        "id": 4007,
+        "phrase": "各种原材料价格的波动直接影响了下游产品的最终市场定价",
+        "change": "氵",
+        "replace": "洛沖源材㳆价洛汋皮沄淔淁澋响了下斿浐品汋㵊泈沛汤淀价"
+    }
+]

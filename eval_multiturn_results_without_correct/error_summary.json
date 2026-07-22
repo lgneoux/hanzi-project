@@ -1,0 +1,30 @@
+{
+    "anthropic/claude-opus-4.6": {
+        "success": 496,
+        "final_error_after_retries": 4,
+        "radical_clean_error": 4
+    },
+    "google/gemini-3.1-pro-preview": {
+        "success": 500
+    },
+    "openai/gpt-5.4": {
+        "success": 499,
+        "final_error_after_retries": 1,
+        "radical_clean_error": 1,
+        "transform_clean_error": 1
+    },
+    "deepseek/deepseek-v3.2": {
+        "success": 491,
+        "final_error_after_retries": 9,
+        "radical_clean_error": 9
+    },
+    "moonshotai/kimi-k2.5": {
+        "success": 495,
+        "final_error_after_retries": 5,
+        "radical_clean_error": 4,
+        "transform_clean_error": 1
+    },
+    "z-ai/glm-5.1": {
+        "success": 500
+    }
+}

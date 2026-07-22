@@ -1,15 +1,15 @@
 # ==========================================================================
-# multi_turn_eval_v2.py
+# multi_turn_eval_with_correct.py
 # ==========================================================================
-# 多轮对话版汉字结构测评 v2
+# 多轮对话版汉字结构测评
 #
 # 最终输出：
-#       eval_multiturn_results_v2/sample_100.json
-#       eval_multiturn_results_v2/multiturn_{model}.jsonl
-#       eval_multiturn_results_v2/multiturn_summary.json
-#       eval_multiturn_results_v2/multiturn_summary.csv
-#       eval_multiturn_results_v2/error_summary.json
-#       eval_multiturn_results_v2/failed_final_{model}.jsonl
+#       eval_multiturn_results_with_correct/sample_{SAMPLE_SIZE}.json
+#       eval_multiturn_results_with_correct/multiturn_{model}.jsonl
+#       eval_multiturn_results_with_correct/multiturn_summary.json
+#       eval_multiturn_results_with_correct/multiturn_summary.csv
+#       eval_multiturn_results_with_correct/error_summary.json
+#       eval_multiturn_results_with_correct/failed_final_{model}.jsonl
 #
 # ==========================================================================
 
@@ -31,50 +31,50 @@ from tqdm import tqdm
 # 1. 基础配置区
 # ==========================================================================
 
-PRIMARY_API_KEY = "" 
-BACKUP_API_KEY = ""     
-BASE_URL = "https://aiberm.com/v1"
+PRIMARY_API_KEY = os.getenv("PRIMARY_API_KEY")
+BACKUP_API_KEY = os.getenv("BACKUP_API_KEY")
+BASE_URL = os.getenv("BASE_URL")
 
 MODEL_LIST = [
-    "claude-opus-4-6",
-    "gemini-3-flash-preview",
-    "glm-5.1",
-    "gemini-3-pro-preview",
-    "gpt-5.4",
-    "deepseek-v3.2",
-    "kimi-k2.5"
+    "anthropic/claude-opus-4.6",
+    "google/gemini-3.1-pro-preview",
+    "openai/gpt-5.4",
+    "deepseek/deepseek-v3.2",
+    "moonshotai/kimi-k2.5",
+    "z-ai/glm-5.1"
 ]
 
 INPUT_FILE = "total_result.json"
-CHAR_DATA_FILE = "char_data1.json"   # 可选；如果存在，会额外统计第一轮部首识别准确率
-OUTPUT_DIR = "eval_multiturn_results_v2"
+CHAR_DATA_FILE = "char_data1_patched.json"  
+OUTPUT_DIR = "eval_multiturn_results_with_correct"
 
-SAMPLE_SIZE = 100
+SAMPLE_SIZE = 500
 RANDOM_SEED = 20260611
 
 MAX_WORKERS = 8
 
-# 大轮次重跑次数：不是单条内部无限 retry
+# 每完成多少条任务保存一次中间结果
+SAVE_EVERY = 10
+
+# 大轮次重跑次数
 MAX_TRIES = 2
 
-# 单次 API 内部仅用于处理偶发网络/限额错误，次数不要太多
+# 单次 API 内部仅用于处理偶发网络/限额错误
 API_MAX_RETRIES = 4
 
 REQUEST_TIMEOUT = 200
 
-# 清洗模型：只负责从混杂输出中提取答案，不参与预测和评分
-CHECK_MODEL = "gpt-5.4"
-
-# 是否启用清洗模型兜底
+# 清洗模型：仅用于从混杂输出中提取答案，不参与预测
+CHECK_MODEL = "openai/gpt-5.4"
 USE_CLEAN_MODEL = True
-
-# 本地规则清洗失败时，调用清洗模型
-USE_CLEAN_MODEL_ON_LOCAL_FAIL = True
-
-# 长输出且本地清洗结果可疑时，调用清洗模型复核
 FORCE_CLEAN_MODEL_ON_RISKY_LONG_OUTPUT = True
 
-# 是否断点续跑：如果结果文件已有某个 id 的 success 记录，就不再跑
+# 第二轮对话历史中是否使用清洗后的部首回答。
+# True：降低第一轮长解释/思考过程对第二轮的污染。
+# False：保留严格真实多轮，把第一轮原始回答完整放回历史。
+USE_CLEANED_RADICAL_IN_HISTORY = True
+
+# 是否断点续跑
 RESUME = True
 
 # 可疑长输出 / 短输出判定，用于 error 统计和是否重跑
@@ -84,7 +84,7 @@ SUSPICIOUS_LONG_EXTRA = 30
 # 是否在最终答案比期望长时截断。仅用于清洗，不使用标准答案。
 TRUNCATE_OVERLONG_TO_EXPECTED_LEN = True
 
-# 如果 3 轮都失败，是否把“最后一次尝试”写入最终文件
+# 如果 MAX_TRIES 轮都失败，是否把“最后一次尝试”写入最终文件
 WRITE_LAST_ATTEMPT_IF_FAILED = True
 
 
@@ -108,9 +108,7 @@ backup_client = OpenAI(
 # ==========================================================================
 
 HANZI_CLEAN_PATTERN = (
-    r"[^\u2E80-\u2EFF"      # CJK 部首补充，如 ⺈、⺮
-    r"\u2F00-\u2FDF"        # 康熙部首，如 ⼀、⼝
-    r"\u3007"
+    r"[^\u2E80-\u2EFF\u2F00-\u2FDF\u3007"
     r"\u3400-\u4DBF"
     r"\u4E00-\u9FFF"
     r"\uF900-\uFAFF"
@@ -121,14 +119,11 @@ HANZI_CLEAN_PATTERN = (
     r"\U0002CEB0-\U0002EBEF"
     r"\U0002F800-\U0002FA1F"
     r"\U00030000-\U0003134F"
-    r"\U00031350-\U000323AF"
     r"]"
 )
 
+
 def safe_text(x) -> str:
-    """
-    把 None、list、tuple、int 等安全转换为字符串，避免清洗和评分时报错。
-    """
     if x is None:
         return ""
     if isinstance(x, str):
@@ -139,9 +134,21 @@ def safe_text(x) -> str:
         return "".join(safe_text(v) for v in x)
     return str(x)
 
+
+def safe_filename(name: str) -> str:
+    """
+    把模型名转换为安全文件名。
+    例如 anthropic/claude-opus-4.6 -> anthropic_claude-opus-4.6
+    避免模型名里的 / 在 Windows 或 Linux 中被当成目录分隔符。
+    """
+    name = safe_text(name)
+    name = re.sub(r'[\\/:*?"<>|\s]+', "_", name)
+    name = name.strip("_")
+    return name or "unknown_model"
+
+
 def clean_hanzi_text(text: str) -> str:
-    text = safe_text(text)
-    return re.sub(HANZI_CLEAN_PATTERN, "", text or "")
+    return re.sub(HANZI_CLEAN_PATTERN, "", safe_text(text))
 
 
 def strip_common_answer_prefix(text: str) -> str:
@@ -323,13 +330,50 @@ def build_radical_prompt(phrase: str) -> str:
 只输出部首串本体。"""
 
 
-def build_transform_prompt_v2(phrase: str, change: str, radical_answer: str) -> str:
+def build_transform_prompt(
+    phrase: str,
+    change: str,
+    radical_answer: str,
+    truth_radicals: Optional[str] = None,
+) -> str:
     """
-    v2 明确第二轮指代，避免模型把第一轮 assistant 的部首串当成待变换对象。
+    第二轮 prompt：
+    1. 明确待处理对象始终是原词，而不是第一轮部首串；
+    2. 如果有标准部首：
+       - 第一轮正确时，明确确认；
+       - 第一轮错误时，用温和、明确的话语进行纠正；
+    3. 标准部首只用于第二轮反馈，不用于清洗最终变换答案。
     """
+    phrase = safe_text(phrase)
+    change = safe_text(change)
+    radical_answer = safe_text(radical_answer)
+    truth_radicals = safe_text(truth_radicals).strip()
+
     n = len(phrase)
-    return f"""刚才讨论的原词是：{phrase}
-你刚才给出的部首识别结果是：{radical_answer}
+
+    if truth_radicals:
+        if radical_answer == truth_radicals:
+            radical_feedback = (
+                f"刚才讨论的原词是：{phrase}\n"
+                f"你刚才给出的部首识别结果是：{radical_answer}\n"
+                "这个部首识别结果是正确的。接下来的字形变换请以该结果为依据。"
+            )
+        else:
+            radical_feedback = (
+                f"刚才讨论的原词是：{phrase}\n"
+                f"你刚才给出的部首识别结果是：{radical_answer}\n"
+                f"这里需要更正：原词“{phrase}”中各字对应的正确部首依次是：{truth_radicals}\n"
+                "接下来的字形变换必须以更正后的正确部首为准，"
+                "不要继续沿用刚才可能有误的识别结果。"
+            )
+    else:
+        radical_feedback = (
+            f"刚才讨论的原词是：{phrase}\n"
+            f"你刚才给出的部首识别结果是：{radical_answer}\n"
+            "当前没有可用的标准部首参考，请基于原词本身和汉字结构完成下面的变换。"
+        )
+
+    return f"""{radical_feedback}
 
 现在请把原词“{phrase}”中的每一个汉字的部首变成“{change}”。
 
@@ -345,7 +389,6 @@ def build_transform_prompt_v2(phrase: str, change: str, radical_answer: str) -> 
 - 输出字数必须和原词完全一致：{n} 个汉字。
 - 只输出最终变换后的完整词语。
 - 禁止解释、分析、标点、空格、英文、Markdown。"""
-
 
 # ==========================================================================
 # 7. API 调用
@@ -409,69 +452,93 @@ def chat_completion(model_name: str, messages: List[dict], max_tokens: int) -> s
 # 8. 清洗和评分
 # ==========================================================================
 
-def clean_to_expected_len(raw_text: str, expected_len: int, phrase: str = "") -> Tuple[str, str]:
-    """
-    把模型输出清洗为 expected_len 个汉字。
-    不使用 replace，只使用长度约束。
-    """
+def build_clean_prompt(raw_text: str, phrase: str, expected_len: int, task_type: str = "transform") -> str:
+    return f"""请从下面模型输出中提取最终答案。
+
+原词：{phrase}
+任务类型：{task_type}
+要求：
+1. 输出必须与原词长度一致：{expected_len} 个字符。
+2. 只输出答案本体。
+3. 不要输出解释、分析、标点、英文、Markdown。
+4. 如果模型输出了思考过程，忽略思考过程，只保留最终答案。
+
+模型输出：
+{raw_text}
+"""
+
+
+def clean_with_check_model(raw_text: str, expected_len: int, phrase: str, task_type: str = "transform") -> Tuple[str, str]:
+    result = chat_completion(
+        model_name=CHECK_MODEL,
+        messages=[
+            {"role": "system", "content": "你是答案提取助手，只输出最终答案。"},
+            {"role": "user", "content": build_clean_prompt(raw_text, phrase, expected_len, task_type)},
+        ],
+        max_tokens=1000,
+    )
+    if not result or result.startswith("ERROR:"):
+        return "ERROR: 清洗模型失败", "clean_model_error"
+    result = strip_common_answer_prefix(clean_hanzi_text(result))
+    if len(result) == expected_len:
+        return result, "clean_model_exact"
+    if len(result) > expected_len:
+        return result[:expected_len], "clean_model_truncate"
+    return "ERROR: 清洗模型长度错误", "clean_model_bad_len"
+
+
+def clean_to_expected_len_local(raw_text: str, expected_len: int, phrase: str = "") -> Tuple[str, str]:
     if not raw_text:
         return "ERROR: 空预测值", "empty"
-
     if raw_text.startswith("ERROR:"):
         return raw_text, "api_error"
 
     lines = [line.strip() for line in raw_text.splitlines() if line.strip()]
+    candidates = []
+    phrase_like = None
 
-    exact_candidates = []
-    phrase_like_candidate = None
-
-    # 多个等长候选时，优先取最后一个非 phrase 候选，适配“初稿 + redo + 最终答案”
     for idx, line in enumerate(lines):
         candidate = strip_common_answer_prefix(clean_hanzi_text(line))
-
         if len(candidate) == expected_len:
             if candidate != phrase:
-                exact_candidates.append((idx, candidate))
-            elif phrase_like_candidate is None:
-                phrase_like_candidate = candidate
+                candidates.append((idx, candidate))
+            else:
+                phrase_like = candidate
 
-    if exact_candidates:
-        idx, candidate = exact_candidates[-1]
-        if len(exact_candidates) == 1:
-            return candidate, f"line_exact_{idx}"
-        return candidate, f"line_exact_last_of_{len(exact_candidates)}_{idx}"
+    if candidates:
+        idx, ans = candidates[-1]
+        return ans, f"line_exact_{idx}"
 
     all_hanzi = strip_common_answer_prefix(clean_hanzi_text(raw_text))
     if len(all_hanzi) == expected_len:
         return all_hanzi, "all_exact"
 
-    # 只对明显像答案行的长输出做截断
     for idx, line in enumerate(lines):
         candidate = strip_common_answer_prefix(clean_hanzi_text(line))
+        if len(candidate) > expected_len and idx == 0:
+            return candidate[:expected_len], f"line_truncate_{idx}"
 
-        if len(candidate) > expected_len:
-            looks_like_answer_line = (
-                idx == 0
-                or line.startswith("答案")
-                or line.startswith("最终答案")
-                or line.startswith("结果")
-                or line.startswith("输出")
-                or line.startswith("预测结果")
-                or line.startswith("模型输出")
-                or line.startswith("变换结果")
-            )
-
-            if looks_like_answer_line and TRUNCATE_OVERLONG_TO_EXPECTED_LEN:
-                truncated = candidate[:expected_len]
-                if truncated != phrase:
-                    return truncated, f"line_truncate_{idx}"
-                if phrase_like_candidate is None:
-                    phrase_like_candidate = truncated
-
-    if phrase_like_candidate is not None:
-        return phrase_like_candidate, "phrase_like_only"
+    if phrase_like:
+        return phrase_like, "phrase_like_only"
 
     return "ERROR: 未找到等长汉字答案", "no_candidate"
+
+
+def clean_to_expected_len(raw_text: str, expected_len: int, phrase: str = "", task_type: str = "transform") -> Tuple[str, str]:
+    local, note = clean_to_expected_len_local(raw_text, expected_len, phrase)
+    raw_text = safe_text(raw_text)
+
+    risky = (
+        len(raw_text) > expected_len * SUSPICIOUS_LONG_MULTIPLIER
+        or len(raw_text) > expected_len + SUSPICIOUS_LONG_EXTRA
+    ) and ("truncate" in note or "last" in note or "phrase_like" in note)
+
+    if local.startswith("ERROR:") or (USE_CLEAN_MODEL and FORCE_CLEAN_MODEL_ON_RISKY_LONG_OUTPUT and risky):
+        model_ans, model_note = clean_with_check_model(raw_text, expected_len, phrase, task_type)
+        if not model_ans.startswith("ERROR:"):
+            return model_ans, model_note
+
+    return local, note
 
 
 def calculate_phrase_score(prediction: str, truth: str) -> float:
@@ -523,6 +590,25 @@ def get_truth_radicals(phrase: str, char_data: dict) -> Optional[str]:
 # 9. Error 评测标准
 # ==========================================================================
 
+# 统一定义：这些错误无论是在当前连续运行中，还是断点续跑时，
+# 都必须被视为“尚未完成”，进入重跑。
+RETRYABLE_ERROR_TYPES = {
+    "api_error",
+    "radical_clean_error",
+    "transform_clean_error",
+    "suspicious_short_output",
+    "final_error_after_retries",
+}
+
+
+def has_retryable_error(error_types) -> bool:
+    """
+    当前运行与断点续跑共用同一套错误判断标准，
+    避免出现“本轮被当作 success，但下次启动又被重跑”的不一致。
+    """
+    return bool(set(error_types or []) & RETRYABLE_ERROR_TYPES)
+
+
 def is_suspicious_long(raw_text: str, expected_len: int) -> bool:
     if not raw_text or raw_text.startswith("ERROR:"):
         return False
@@ -551,7 +637,6 @@ def classify_attempt_error(attempt: dict) -> Tuple[bool, List[str]]:
         - radical_clean_error
         - transform_clean_error
         - suspicious_short_output
-        - suspicious_long_output
     """
     error_types = []
 
@@ -574,19 +659,13 @@ def classify_attempt_error(attempt: dict) -> Tuple[bool, List[str]]:
     if transform_clean.startswith("ERROR:"):
         error_types.append("transform_clean_error")
 
-    if is_suspicious_long(transform_raw, expected_len):
-        error_types.append("suspicious_long_output")
 
     if is_suspicious_short_hanzi(transform_clean, expected_len):
         error_types.append("suspicious_short_output")
 
-    # 关键修改：只要有任何 error，就重跑
-    should_retry = (
-    "api_error" in error_types
-    or "radical_clean_error" in error_types
-    or "transform_clean_error" in error_types
-    or "suspicious_short_output" in error_types
-)
+    # 当前连续运行与断点续跑使用同一套标准。
+    # 只要存在任何 RETRYABLE_ERROR_TYPES，就不能标记为 success。
+    should_retry = has_retryable_error(error_types)
 
     return should_retry, error_types
 
@@ -596,9 +675,9 @@ def classify_attempt_error(attempt: dict) -> Tuple[bool, List[str]]:
 # ==========================================================================
 
 def run_one_attempt(model_name: str, item: dict, char_data: dict, attempt_no: int) -> dict:
-    phrase = item["phrase"]
-    change = item["change"]
-    truth = item["replace"]
+    phrase = safe_text(item.get("phrase", ""))
+    change = safe_text(item.get("change", ""))
+    truth = safe_text(item.get("replace", ""))
     expected_len = len(phrase)
 
     user_1 = build_radical_prompt(phrase)
@@ -611,19 +690,44 @@ def run_one_attempt(model_name: str, item: dict, char_data: dict, attempt_no: in
     radical_raw = chat_completion(
         model_name=model_name,
         messages=messages,
-        max_tokens=3000
+        max_tokens=3000,
     )
 
+    # 第一轮仍完全沿用 clean_model_fixed 的规范清洗流程。
     radical_clean, radical_clean_note = clean_to_expected_len(
         radical_raw,
         expected_len=expected_len,
-        phrase="",
+        phrase=phrase,
+        task_type="radical",
     )
 
-    # 真实多轮：把第一轮 assistant 的原始回答放回对话历史
-    messages.append({"role": "assistant", "content": radical_raw})
+    # 从标准字典读取部首串，只用于：
+    # 1. 计算第一轮部首识别准确率；
+    # 2. 在第二轮中确认或纠正第一轮部首结果。
+    # 它不会传给最终答案清洗器，也不会替代 replace 参与答案提取。
+    truth_radicals = get_truth_radicals(phrase, char_data)
 
-    user_2 = build_transform_prompt_v2(phrase, change, radical_raw)
+    if truth_radicals is None:
+        radical_feedback_type = "no_truth_radicals"
+        used_radical_correction = False
+    elif radical_clean == truth_radicals:
+        radical_feedback_type = "confirmed"
+        used_radical_correction = False
+    else:
+        radical_feedback_type = "corrected"
+        used_radical_correction = True
+
+    # 第二轮对话历史默认放入清洗后的第一轮答案，减少长解释对后续任务的污染。
+    # 若关闭该开关，则恢复严格原始多轮历史。
+    radical_history_content = radical_clean if USE_CLEANED_RADICAL_IN_HISTORY else radical_raw
+    messages.append({"role": "assistant", "content": radical_history_content})
+
+    user_2 = build_transform_prompt(
+        phrase=phrase,
+        change=change,
+        radical_answer=radical_clean,
+        truth_radicals=truth_radicals,
+    )
     messages.append({"role": "user", "content": user_2})
 
     transform_raw = chat_completion(
@@ -632,23 +736,27 @@ def run_one_attempt(model_name: str, item: dict, char_data: dict, attempt_no: in
         max_tokens=6000,
     )
 
+    # 第二轮也完全沿用 clean_model_fixed 的规范清洗流程。
     transform_clean, transform_clean_note = clean_to_expected_len(
         transform_raw,
         expected_len=expected_len,
         phrase=phrase,
+        task_type="transform",
     )
 
     score = calculate_phrase_score(transform_clean, truth)
     correct_chars, total_chars = char_level_correct(transform_clean, truth)
 
-    truth_radicals = get_truth_radicals(phrase, char_data)
     radical_score = None
     radical_correct_chars = None
     radical_total_chars = None
 
     if truth_radicals is not None:
         radical_score = calculate_phrase_score(radical_clean, truth_radicals)
-        radical_correct_chars, radical_total_chars = char_level_correct(radical_clean, truth_radicals)
+        radical_correct_chars, radical_total_chars = char_level_correct(
+            radical_clean,
+            truth_radicals,
+        )
 
     attempt = {
         "attempt_no": attempt_no,
@@ -668,12 +776,14 @@ def run_one_attempt(model_name: str, item: dict, char_data: dict, attempt_no: in
             {
                 "role": "assistant",
                 "content": radical_raw,
+                "history_content": radical_history_content,
                 "cleaned": radical_clean,
                 "cleaning_note": radical_clean_note,
             },
             {
                 "role": "user",
                 "content": user_2,
+                "radical_feedback_type": radical_feedback_type,
             },
             {
                 "role": "assistant",
@@ -687,6 +797,8 @@ def run_one_attempt(model_name: str, item: dict, char_data: dict, attempt_no: in
         "radical_prediction_cleaned": radical_clean,
         "radical_cleaning_note": radical_clean_note,
         "truth_radicals": truth_radicals,
+        "used_radical_correction": used_radical_correction,
+        "radical_feedback_type": radical_feedback_type,
         "radical_score": radical_score,
         "radical_correct_chars": radical_correct_chars,
         "radical_total_chars": radical_total_chars,
@@ -700,12 +812,21 @@ def run_one_attempt(model_name: str, item: dict, char_data: dict, attempt_no: in
     }
 
     should_retry, error_types = classify_attempt_error(attempt)
+
+    warning_types = []
+
+    if is_suspicious_long(radical_raw, expected_len):
+        warning_types.append("suspicious_long_radical_output")
+
+    if is_suspicious_long(transform_raw, expected_len):
+        warning_types.append("suspicious_long_transform_output")
+
     attempt["should_retry"] = should_retry
     attempt["error_types"] = error_types
+    attempt["warning_types"] = warning_types
     attempt["status"] = "error" if should_retry else "success"
 
     return attempt
-
 
 def build_final_result_from_attempts(item: dict, model_name: str, attempts: List[dict]) -> dict:
     """
@@ -769,15 +890,58 @@ def summarize_results(model_name: str, results: List[dict]) -> dict:
     total_chars = sum(item.get("total_chars", 0) for item in results)
     char_accuracy = total_correct_chars / total_chars if total_chars else 0.0
 
+    # 第一轮部首识别表现
     radical_items = [item for item in results if item.get("radical_score") is not None]
+    radical_valid_items = len(radical_items)
     radical_avg_score = None
     radical_char_accuracy = None
 
     if radical_items:
-        radical_avg_score = sum(item["radical_score"] for item in radical_items) / len(radical_items)
+        radical_avg_score = (
+            sum(item.get("radical_score", 0.0) for item in radical_items)
+            / radical_valid_items
+        )
         radical_correct = sum(item.get("radical_correct_chars", 0) for item in radical_items)
         radical_total = sum(item.get("radical_total_chars", 0) for item in radical_items)
         radical_char_accuracy = radical_correct / radical_total if radical_total else 0.0
+
+    # 第二轮按“确认 / 纠正 / 无标准部首”分组统计。
+    def feedback_group_stats(feedback_type: str) -> dict:
+        group_items = [
+            item for item in results
+            if item.get("radical_feedback_type") == feedback_type
+        ]
+
+        n = len(group_items)
+        if n == 0:
+            return {
+                "n": 0,
+                "transform_avg_score": None,
+                "transform_char_accuracy": None,
+                "total_correct_chars": 0,
+                "total_chars": 0,
+            }
+
+        group_correct_chars = sum(item.get("correct_chars", 0) for item in group_items)
+        group_total_chars = sum(item.get("total_chars", 0) for item in group_items)
+
+        return {
+            "n": n,
+            "transform_avg_score": (
+                sum(item.get("score", 0.0) for item in group_items) / n
+            ),
+            "transform_char_accuracy": (
+                group_correct_chars / group_total_chars
+                if group_total_chars
+                else 0.0
+            ),
+            "total_correct_chars": group_correct_chars,
+            "total_chars": group_total_chars,
+        }
+
+    confirmed_summary = feedback_group_stats("confirmed")
+    corrected_summary = feedback_group_stats("corrected")
+    no_truth_radicals_summary = feedback_group_stats("no_truth_radicals")
 
     error_counts = {}
     for item in results:
@@ -786,6 +950,14 @@ def summarize_results(model_name: str, results: List[dict]) -> dict:
         if item.get("final_status") == "success":
             error_counts["success"] = error_counts.get("success", 0) + 1
 
+    warning_counts = {}
+
+    for item in results:
+        for warning_type in item.get("warning_types", []):
+            warning_counts[warning_type] = (
+                warning_counts.get(warning_type, 0) + 1
+            )
+
     bucket_summary = {}
     for bucket in ["short_1_3", "medium_4_6", "long_7_10", "very_long_11_plus"]:
         bucket_items = [item for item in results if item.get("length_bucket") == bucket]
@@ -793,7 +965,10 @@ def summarize_results(model_name: str, results: List[dict]) -> dict:
             continue
         bucket_summary[bucket] = {
             "n": len(bucket_items),
-            "avg_score": sum(item.get("score", 0.0) for item in bucket_items) / len(bucket_items),
+            "avg_score": (
+                sum(item.get("score", 0.0) for item in bucket_items)
+                / len(bucket_items)
+            ),
             "char_accuracy": (
                 sum(item.get("correct_chars", 0) for item in bucket_items)
                 / max(1, sum(item.get("total_chars", 0) for item in bucket_items))
@@ -807,65 +982,175 @@ def summarize_results(model_name: str, results: List[dict]) -> dict:
         "char_accuracy": char_accuracy,
         "total_correct_chars": total_correct_chars,
         "total_chars": total_chars,
+
+        "radical_valid_items": radical_valid_items,
         "radical_avg_score": radical_avg_score,
         "radical_char_accuracy": radical_char_accuracy,
+
+        "confirmed_summary": confirmed_summary,
+        "corrected_summary": corrected_summary,
+        "no_truth_radicals_summary": no_truth_radicals_summary,
+
+        # 平铺字段，方便写入 CSV。
+        "confirmed_n": confirmed_summary["n"],
+        "confirmed_transform_avg_score": confirmed_summary["transform_avg_score"],
+        "confirmed_transform_char_accuracy": confirmed_summary["transform_char_accuracy"],
+        "corrected_n": corrected_summary["n"],
+        "corrected_transform_avg_score": corrected_summary["transform_avg_score"],
+        "corrected_transform_char_accuracy": corrected_summary["transform_char_accuracy"],
+        "no_truth_radicals_n": no_truth_radicals_summary["n"],
+        "no_truth_transform_avg_score": no_truth_radicals_summary["transform_avg_score"],
+        "no_truth_transform_char_accuracy": no_truth_radicals_summary["transform_char_accuracy"],
+
         "error_counts": error_counts,
+        "warning_counts": warning_counts,
         "bucket_summary": bucket_summary,
     }
 
+def run_model(
+    model_name: str,
+    sample_items: List[dict],
+    char_data: dict,
+) -> Tuple[List[dict], dict]:
 
-def run_model(model_name: str, sample_items: List[dict], char_data: dict) -> Tuple[List[dict], dict]:
     print(f"\n🚀 多轮评测模型：{model_name}")
 
     Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
-    output_file = os.path.join(OUTPUT_DIR, f"multiturn_{model_name}.jsonl")
-    failed_file = os.path.join(OUTPUT_DIR, f"failed_final_{model_name}.jsonl")
+    safe_model_name = safe_filename(model_name)
+
+    output_file = os.path.join(
+        OUTPUT_DIR,
+        f"multiturn_{safe_model_name}.jsonl",
+    )
+    failed_file = os.path.join(
+        OUTPUT_DIR,
+        f"failed_final_{safe_model_name}.jsonl",
+    )
 
     done_results = []
     done_ids = set()
 
+    # ======================================================================
+    # 1. 读取已有结果，用于断点续跑
+    # ======================================================================
+
     if RESUME and os.path.exists(output_file):
         existing = read_jsonl(output_file)
 
-        # 只有 final_status=success 且没有任何 error_types 的样本才视为完成。
-        # 如果旧结果虽然 success，但带有 radical_clean_error / suspicious_long_output 等，
-        # 也会重新进入本轮测试。
+        # 只有最终成功，并且没有任何错误标签的结果才直接复用
         for item in existing:
             error_types = item.get("error_types", [])
-            if item.get("final_status") == "success" and not error_types:
+
+            if (
+                item.get("final_status") == "success"
+                and not error_types
+            ):
                 done_results.append(item)
                 done_ids.add(item.get("id"))
 
-        print(f"🔁 检测到已有无 error 的 success 结果：{len(done_ids)} 条，将跳过这些 id。")
+        print(
+            f"🔁 检测到已有可复用的无错误 success 结果："
+            f"{len(done_ids)} 条，将跳过这些 id。"
+        )
 
-    pending = [item.copy() for item in sample_items if item.get("id") not in done_ids]
-    attempts_by_id = {item.get("id"): [] for item in pending}
+    # 尚未完成的样本
+    pending = [
+        item.copy()
+        for item in sample_items
+        if item.get("id") not in done_ids
+    ]
 
-    accepted_by_id = {item.get("id"): item for item in done_results}
+    # 保存本次运行中每个样本的全部尝试
+    attempts_by_id = {
+        item.get("id"): []
+        for item in pending
+    }
+
+    # 保存已经完成的最终结果
+    accepted_by_id = {
+        item.get("id"): item
+        for item in done_results
+    }
+
+    # 距离上一次保存，已经完成了多少次任务
+    completed_since_save = 0
+
+    # ======================================================================
+    # 2. 中间检查点保存
+    # ======================================================================
+
+    def save_checkpoint() -> None:
+        """
+        保存当前已经成功完成或已经复用的最终结果。
+
+        使用覆盖写入，避免同一个 id 因断点续跑或重试而重复出现。
+        第一轮失败、仍等待下一轮重试的样本暂时不写入主结果文件。
+        """
+
+        checkpoint_results = [
+            accepted_by_id[item.get("id")]
+            for item in sample_items
+            if item.get("id") in accepted_by_id
+        ]
+
+        checkpoint_results = sorted(
+            checkpoint_results,
+            key=sort_key_by_id,
+        )
+
+        rewrite_jsonl(
+            output_file,
+            checkpoint_results,
+        )
+
+    # ======================================================================
+    # 3. 大轮次运行
+    # ======================================================================
 
     for round_idx in range(1, MAX_TRIES + 1):
         if not pending:
             break
 
-        print(f"\n🔁 第 {round_idx}/{MAX_TRIES} 轮：待处理 {len(pending)} 条")
+        print(
+            f"\n🔁 第 {round_idx}/{MAX_TRIES} 轮："
+            f"待处理 {len(pending)} 条"
+        )
 
         next_pending = []
 
-        with tqdm(total=len(pending), desc=f"multiturn {model_name} round {round_idx}", unit="条") as pbar:
-            with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        with tqdm(
+            total=len(pending),
+            desc=f"multiturn {model_name} round {round_idx}",
+            unit="条",
+        ) as pbar:
+
+            with concurrent.futures.ThreadPoolExecutor(
+                max_workers=MAX_WORKERS
+            ) as executor:
+
                 future_to_item = {
-                    executor.submit(run_one_attempt, model_name, item.copy(), char_data, round_idx): item
+                    executor.submit(
+                        run_one_attempt,
+                        model_name,
+                        item.copy(),
+                        char_data,
+                        round_idx,
+                    ): item
                     for item in pending
                 }
 
-                for future in concurrent.futures.as_completed(future_to_item):
+                for future in concurrent.futures.as_completed(
+                    future_to_item
+                ):
                     original_item = future_to_item[future]
 
                     try:
                         attempt = future.result()
+
                     except Exception as e:
                         phrase = original_item.get("phrase", "")
                         truth = original_item.get("replace", "")
+
                         attempt = {
                             "attempt_no": round_idx,
                             "id": original_item.get("id"),
@@ -874,54 +1159,158 @@ def run_model(model_name: str, sample_items: List[dict], char_data: dict) -> Tup
                             "change": original_item.get("change"),
                             "replace": truth,
                             "phrase_len": len(phrase),
-                            "length_bucket": length_bucket(len(phrase)),
+                            "length_bucket": length_bucket(
+                                len(phrase)
+                            ),
                             "turns": [],
-                            "radical_prediction_raw": f"ERROR: Future 异常: {str(e)}",
-                            "radical_prediction_cleaned": f"ERROR: Future 异常: {str(e)}",
-                            "model_prediction_raw": f"ERROR: Future 异常: {str(e)}",
-                            "cleaned_prediction": f"ERROR: Future 异常: {str(e)}",
+
+                            "radical_prediction_raw": (
+                                f"ERROR: Future 异常: {str(e)}"
+                            ),
+                            "radical_prediction_cleaned": (
+                                f"ERROR: Future 异常: {str(e)}"
+                            ),
+                            "model_prediction_raw": (
+                                f"ERROR: Future 异常: {str(e)}"
+                            ),
+                            "cleaned_prediction": (
+                                f"ERROR: Future 异常: {str(e)}"
+                            ),
+
                             "score": 0.0,
                             "correct_chars": 0,
                             "total_chars": len(truth),
+
                             "status": "error",
                             "should_retry": True,
                             "error_types": ["api_error"],
+                            "warning_types": [],
                         }
 
                     item_id = attempt.get("id")
-                    attempts_by_id.setdefault(item_id, []).append(attempt)
 
+                    attempts_by_id.setdefault(
+                        item_id,
+                        [],
+                    ).append(attempt)
+
+                    # 当前尝试成功，生成最终结果
                     if attempt.get("status") == "success":
-                        final_result = build_final_result_from_attempts(original_item, model_name, attempts_by_id[item_id])
+                        final_result = build_final_result_from_attempts(
+                            original_item,
+                            model_name,
+                            attempts_by_id[item_id],
+                        )
+
                         accepted_by_id[item_id] = final_result
+
+                    # 当前尝试失败，下一大轮继续重跑
                     else:
-                        next_pending.append(original_item.copy())
+                        next_pending.append(
+                            original_item.copy()
+                        )
+
+                    # 无论成功还是失败，都算完成了一次任务
+                    completed_since_save += 1
+
+                    # 每完成 SAVE_EVERY 次任务保存一次
+                    if completed_since_save >= SAVE_EVERY:
+                        save_checkpoint()
+                        completed_since_save = 0
 
                     pbar.update(1)
 
-        print(f"✅ 第 {round_idx} 轮结束：已成功 {len(accepted_by_id)} / {len(sample_items)}，下一轮待重跑 {len(next_pending)}")
+        # 本轮结束后强制保存一次
+        # 避免最后不足 SAVE_EVERY 条的成功结果没有写入文件
+        save_checkpoint()
+        completed_since_save = 0
+
+        print(
+            f"✅ 第 {round_idx} 轮结束："
+            f"已成功 {len(accepted_by_id)} / "
+            f"{len(sample_items)}，"
+            f"下一轮待重跑 {len(next_pending)}"
+        )
+
         pending = next_pending
 
-    # 仍失败的样本写入最终结果
+    # ======================================================================
+    # 4. 最大重试轮次后，仍失败的样本写入最终结果
+    # ======================================================================
+
     if pending and WRITE_LAST_ATTEMPT_IF_FAILED:
-        print(f"⚠️ {len(pending)} 条样本在 {MAX_TRIES} 轮后仍失败，将写入 final_error。")
+        print(
+            f"⚠️ {len(pending)} 条样本在 "
+            f"{MAX_TRIES} 轮后仍失败，"
+            f"将写入 final_error。"
+        )
+
         for item in pending:
             item_id = item.get("id")
-            final_result = build_final_result_from_attempts(item, model_name, attempts_by_id.get(item_id, []))
+
+            final_result = build_final_result_from_attempts(
+                item,
+                model_name,
+                attempts_by_id.get(item_id, []),
+            )
+
             accepted_by_id[item_id] = final_result
 
-    results = [accepted_by_id[item.get("id")] for item in sample_items if item.get("id") in accepted_by_id]
-    results = sorted(results, key=sort_key_by_id)
+        # 最终失败结果加入后立即保存
+        save_checkpoint()
 
-    rewrite_jsonl(output_file, results)
+    # ======================================================================
+    # 5. 整理完整结果
+    # ======================================================================
 
-    failed_results = [item for item in results if item.get("final_status") != "success"]
-    rewrite_jsonl(failed_file, failed_results)
+    results = [
+        accepted_by_id[item.get("id")]
+        for item in sample_items
+        if item.get("id") in accepted_by_id
+    ]
 
-    summary = summarize_results(model_name, results)
+    results = sorted(
+        results,
+        key=sort_key_by_id,
+    )
 
-    print(f"✅ {model_name} 完成：平均逐题得分 {summary['avg_score']:.2%}，按字准确率 {summary['char_accuracy']:.2%}")
+    # 模型全部结束后，再完整覆盖保存一次
+    rewrite_jsonl(
+        output_file,
+        results,
+    )
+
+    # ======================================================================
+    # 6. 单独保存最终失败项
+    # ======================================================================
+
+    failed_results = [
+        item
+        for item in results
+        if item.get("final_status") != "success"
+    ]
+
+    rewrite_jsonl(
+        failed_file,
+        failed_results,
+    )
+
+    # ======================================================================
+    # 7. 汇总统计
+    # ======================================================================
+
+    summary = summarize_results(
+        model_name,
+        results,
+    )
+
+    print(
+        f"✅ {model_name} 完成："
+        f"平均逐题得分 {summary['avg_score']:.2%}，"
+        f"按字准确率 {summary['char_accuracy']:.2%}"
+    )
     print(f"🧪 Error counts: {summary['error_counts']}")
+    print(f"⚠️ Warning counts: {summary['warning_counts']}")
 
     return results, summary
 
@@ -933,62 +1322,133 @@ def run_model(model_name: str, sample_items: List[dict], char_data: dict) -> Tup
 def write_summary_files(summaries: List[dict]) -> None:
     Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
 
-    summary_json = os.path.join(OUTPUT_DIR, "multiturn_summary.json")
-    summary_csv = os.path.join(OUTPUT_DIR, "multiturn_summary.csv")
-    error_json = os.path.join(OUTPUT_DIR, "error_summary.json")
+    summary_json = os.path.join(
+        OUTPUT_DIR,
+        "multiturn_summary.json",
+    )
+    summary_csv = os.path.join(
+        OUTPUT_DIR,
+        "multiturn_summary.csv",
+    )
+    error_json = os.path.join(
+        OUTPUT_DIR,
+        "error_summary.json",
+    )
+    warning_json = os.path.join(
+        OUTPUT_DIR,
+        "warning_summary.json",
+    )
 
     write_json(summary_json, summaries)
 
-    with open(summary_csv, "w", encoding="utf-8-sig", newline="") as f:
+    with open(
+        summary_csv,
+        "w",
+        encoding="utf-8-sig",
+        newline="",
+    ) as f:
         writer = csv.writer(f)
+
         writer.writerow([
             "model",
             "total_items",
+
+            # 总体第二轮变换表现
             "avg_score",
             "char_accuracy",
             "total_correct_chars",
             "total_chars",
+
+            # 第一轮部首识别表现
+            "radical_valid_items",
             "radical_avg_score",
             "radical_char_accuracy",
+
+            # 第一轮正确、第二轮得到确认
+            "confirmed_n",
+            "confirmed_transform_avg_score",
+            "confirmed_transform_char_accuracy",
+
+            # 第一轮错误、第二轮得到纠正
+            "corrected_n",
+            "corrected_transform_avg_score",
+            "corrected_transform_char_accuracy",
+
+            # 缺少标准部首、无法确认或纠正
+            "no_truth_radicals_n",
+            "no_truth_transform_avg_score",
+            "no_truth_transform_char_accuracy",
+
+            # 成功与真正的流程错误
             "success",
             "api_error",
             "radical_clean_error",
             "transform_clean_error",
             "suspicious_short_output",
-            "suspicious_long_output",
             "final_error_after_retries",
+
+            # 仅记录、不触发重跑的警告
+            "suspicious_long_radical_output",
+            "suspicious_long_transform_output",
         ])
 
         for s in summaries:
             ec = s.get("error_counts", {})
+            wc = s.get("warning_counts", {})
+
             writer.writerow([
                 s.get("model"),
                 s.get("total_items"),
+
                 s.get("avg_score"),
                 s.get("char_accuracy"),
                 s.get("total_correct_chars"),
                 s.get("total_chars"),
+
+                s.get("radical_valid_items"),
                 s.get("radical_avg_score"),
                 s.get("radical_char_accuracy"),
+
+                s.get("confirmed_n"),
+                s.get("confirmed_transform_avg_score"),
+                s.get("confirmed_transform_char_accuracy"),
+
+                s.get("corrected_n"),
+                s.get("corrected_transform_avg_score"),
+                s.get("corrected_transform_char_accuracy"),
+
+                s.get("no_truth_radicals_n"),
+                s.get("no_truth_transform_avg_score"),
+                s.get("no_truth_transform_char_accuracy"),
+
                 ec.get("success", 0),
                 ec.get("api_error", 0),
                 ec.get("radical_clean_error", 0),
                 ec.get("transform_clean_error", 0),
                 ec.get("suspicious_short_output", 0),
-                ec.get("suspicious_long_output", 0),
                 ec.get("final_error_after_retries", 0),
+
+                wc.get("suspicious_long_radical_output", 0),
+                wc.get("suspicious_long_transform_output", 0),
             ])
 
     error_payload = {
         s["model"]: s.get("error_counts", {})
         for s in summaries
     }
+
+    warning_payload = {
+        s["model"]: s.get("warning_counts", {})
+        for s in summaries
+    }
+
     write_json(error_json, error_payload)
+    write_json(warning_json, warning_payload)
 
     print(f"\n📊 汇总 JSON 已写出：{summary_json}")
     print(f"📊 汇总 CSV 已写出：{summary_csv}")
     print(f"📊 Error 汇总已写出：{error_json}")
-
+    print(f"⚠️ Warning 汇总已写出：{warning_json}")
 
 # ==========================================================================
 # 13. 主程序
@@ -1002,7 +1462,7 @@ def main() -> None:
 
     sample_items = stratified_sample(all_data, SAMPLE_SIZE, RANDOM_SEED)
 
-    sample_file = os.path.join(OUTPUT_DIR, "sample_100.json")
+    sample_file = os.path.join(OUTPUT_DIR, f"sample_{SAMPLE_SIZE}.json")
     write_json(sample_file, sample_items)
 
     print(f"✅ 已抽样 {len(sample_items)} 道，样本文件：{sample_file}")
@@ -1021,7 +1481,7 @@ def main() -> None:
 
     write_summary_files(summaries)
 
-    print("\n🎉 多轮对话测评 v2 全部完成。")
+    print("\n🎉 多轮对话测评全部完成。")
 
 
 if __name__ == "__main__":
